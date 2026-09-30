@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Démo guidée de L'Atelier — BudappsAI</title>
+<meta name="description" content="Parcourez L'Atelier en huit étapes, sur un projet d'exemple : business plan, faisabilité, droit, bâtiment, énergie, immobilier et pilotage. Gratuit, sans installation.">
+<meta name="theme-color" content="#09090b">
+<link rel="canonical" href="https://www.budappsai.com/demo.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Démo guidée de L'Atelier — BudappsAI">
+<meta property="og:description" content="Huit étapes sur un projet d'exemple, gratuitement, sans installation.">
+<meta property="og:image" content="https://www.budappsai.com/img/partage.jpg">
+<link rel="stylesheet" href="budappsai.css">
+<style>
+.tete-demo{text-align:center;padding:56px 0 8px}
+.tete-demo h1{font-size:clamp(36px,5.4vw,68px);letter-spacing:-.05em;line-height:1;margin:12px auto 12px;max-width:900px}
+.tete-demo .chapeau{font-size:17px}
+.exemple{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;color:var(--texte3)}
+.exemple i{width:8px;height:8px;border-radius:50%;background:var(--vert)}
+
+/* Les étapes, en onglets au-dessus de l'écran */
+.etapes{list-style:none;margin:34px 0 14px;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;counter-reset:e}
+.etapes li{counter-increment:e;flex:1 0 auto}
+.etapes button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:10px;align-items:center;width:100%;
+  padding:10px 14px;border-radius:14px;border:1px solid var(--bord);background:rgba(255,255,255,.02);color:var(--texte2);transition:background .2s,border-color .2s,color .2s}
+.etapes button::before{content:counter(e);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none;
+  background:var(--fond3);border:1px solid var(--bord)}
+.etapes button:hover{background:rgba(255,255,255,.05);color:var(--texte)}
+.etapes button[aria-current]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 18%,transparent)}
+.etapes button[aria-current]::before{background:var(--c);border-color:transparent;color:#fff}
+.etapes b{font-weight:600;font-size:14px;white-space:nowrap}
+
+/* L'écran : grand, entier, net */
+.fenetre{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#16161b;
+  box-shadow:0 40px 100px -30px rgba(0,0,0,.9)}
+.chrome{height:36px;background:#1c1c22;display:flex;align-items:center;gap:7px;padding:0 12px 0 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.chrome i{width:11px;height:11px;border-radius:50%}
+.chrome i:nth-child(1){background:#ff5f57}.chrome i:nth-child(2){background:#febc2e}.chrome i:nth-child(3){background:#28c840}
+.chrome span{margin:0 auto;font-size:12.5px;color:var(--texte2);padding:3px 14px;border-radius:8px;background:rgba(255,255,255,.05)}
+.chrome button{all:unset;cursor:pointer;display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--texte2);padding:4px 10px;border-radius:8px}
+.chrome button:hover{background:rgba(255,255,255,.08);color:#fff}
+.chrome button svg{width:15px;height:15px}
+.vue{position:relative;display:grid}
+.vue img{grid-area:1/1;width:100%;height:auto;opacity:0;transition:opacity .45s}
+.vue img.on{opacity:1}
+.fenetre:fullscreen{border-radius:0;border:0;background:#0b0b0e;display:flex;flex-direction:column}
+.fenetre:fullscreen .vue{flex:1;place-items:center;min-height:0}
+.fenetre:fullscreen .vue img{max-height:calc(100vh - 36px);width:auto;max-width:100%;margin:auto}
+
+/* La légende, sous l'écran */
+.legende{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-top:24px}
+.legende .app{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.legende h2{text-align:left;font-size:clamp(24px,2.8vw,34px);margin:6px 0 6px;max-width:none}
+.legende p{margin:0;color:var(--texte2);font-weight:300;font-size:17.5px;max-width:720px}
+.commandes{display:flex;gap:8px;align-items:center}
+.rond{width:52px;height:52px;border-radius:50%;border:1px solid var(--bord);background:rgba(255,255,255,.04);display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.rond:hover{background:rgba(255,255,255,.1)}
+.rond svg{width:20px;height:20px}
+.rond.suivant{background:var(--texte);color:#0b0b0e;border-color:transparent}
+.rond.suivant:hover{background:#fff}
+.compte{font-variant-numeric:tabular-nums;color:var(--texte3);font-size:14px;min-width:44px;text-align:center}
+.auto{all:unset;cursor:pointer;font-size:13.5px;color:var(--texte3);display:inline-flex;gap:8px;align-items:center;margin-top:18px}
+.auto:hover{color:var(--texte)}
+.auto i{width:30px;height:18px;border-radius:9px;background:var(--fond3);border:1px solid var(--bord);position:relative;transition:background .2s}
+.auto i::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--texte2);transition:transform .2s}
+.auto[aria-pressed=true] i{background:var(--violet)}
+.auto[aria-pressed=true] i::after{transform:translateX(12px);background:#fff}
+.fin-visite{padding:90px 0 110px}
+@media (max-width:900px){
+  .legende{grid-template-columns:1fr}
+  .etapes li{flex:none}
+  .chrome span{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ciel" aria-hidden="true"><div class="points"></div></div>
+<!--TETE-->
+<header class="tete">
+  <div class="enveloppe barre">
+    <a class="marque" href="./" aria-label="BudappsAI, accueil"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+    <nav class="liens" aria-label="Navigation principale"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html" aria-current=page>Démo</a><a href="contact.html">Contact</a></nav>
+    <div class="boutons-tete"><a class="btn demo" href="demo.html">Voir la démo</a><a class="btn btn-lumiere aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-mobile"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html" aria-current=page>Démo</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
+<!--/TETE-->
+
+<main>
+  <div class="enveloppe">
+    <div class="tete-demo">
+      <div class="etiquette revele">Démo guidée</div>
+      <h1 data-mots>L'Atelier, en <span class="degrade">huit étapes</span></h1>
+      <p class="chapeau revele d2">Un projet d'exemple, du premier écran au pilotage. Passez d'une étape à l'autre avec les flèches, ou ouvrez l'écran en grand.</p>
+      <div class="exemple revele d3"><i></i>Projet d'exemple : aucune donnée réelle</div>
+    </div>
+
+    <ol class="etapes" id="etapes" aria-label="Les étapes de la démo"></ol>
+
+    <div class="fenetre" id="fenetre">
+      <div class="chrome"><i></i><i></i><i></i><span id="barreTitre">L'Atelier</span>
+        <button type="button" id="grand" title="Plein écran"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="lecteur-seul">Plein écran</span></button>
+      </div>
+      <div class="vue" id="vue"></div>
+    </div>
+
+    <div class="legende">
+      <div><div class="app" id="app"></div><h2 id="titre"></h2><p id="texte"></p></div>
+      <div class="commandes">
+        <button class="rond" id="prec" aria-label="Étape précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6 6-6-6 6-6"/></svg></button>
+        <span class="compte" id="compte">1 / 8</span>
+        <button class="rond suivant" id="suiv" aria-label="Étape suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <button class="auto" id="auto" type="button" aria-pressed="false"><i></i>Défilement automatique</button>
+
+    <section class="fin-visite">
+      <div class="carte revele" style="text-align:center;padding:64px 24px;background:radial-gradient(ellipse at 50% 0%,rgba(109,93,252,.3),transparent 60%),var(--fond2)">
+        <h2 data-mots>Vous avez vu l'essentiel</h2>
+        <p class="chapeau">L'application s'installe sur votre poste après l'abonnement. Vos dossiers restent chez vous.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+          <a class="btn btn-plein aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="btn aimant" href="contact.html">Poser une question</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!--PIED-->
+<footer class="pied">
+  <div class="enveloppe">
+    <div class="colonnes">
+      <div><a class="marque" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+        <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
+      <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:erwan.riquier@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="geant" aria-hidden="true">budappsai</div>
+    <div class="bas"><span>© <span data-annee>2026</span> BudappsAI</span><span>Aucun cookie, aucun traceur.</span></div>
+  </div>
+</footer>
+<!--/PIED-->
+
+<script src="budappsai.js"></script>
+<script>
+(() => {
+  const ETAPES = [
+    { img: 'atelier-accueil', app: "L'Atelier", c: '#6d5dfc', titre: "L'accueil",
+      texte: "Trois familles d'applications autour du même dossier : finance et juridique, BTP et énergie, gestion et pilotage. Le pays et la langue se choisissent ici." },
+    { img: 'creata-accueil', app: 'CREATA', c: '#5b4bd6', titre: 'Le projet prend forme',
+      texte: "Business plan, financement, trésorerie mois par mois : le projet d'exemple est déjà rempli." },
+    { img: 'creata-faisabilite', app: 'CREATA', c: '#5b4bd6', titre: 'Le score de faisabilité',
+      texte: "Le verdict, et le fil du calcul : chaque chiffre montre sa source et sa suite, jusqu'au score." },
+    { img: 'juridia-accueil', app: 'JURIDIA', c: '#e0342f', titre: "Ce que l'activité impose",
+      texte: "Les obligations que déclenche l'activité, chacune avec sa source et sa sanction." },
+    { img: 'btpedia-accueil', app: 'BTPEDIA', c: '#ef8a1f', titre: "Dessiner l'ouvrage",
+      texte: 'Plans, métrés et quantités : le devis découle du dessin.' },
+    { img: 'energia-accueil', app: 'ENERGIA', c: '#18a24a', titre: "L'énergie du bâtiment",
+      texte: "La consommation, local par local, et ce qu'elle coûte." },
+    { img: 'patrimonia-accueil', app: 'PATRIMONIA', c: '#12a0e0', titre: "L'investissement immobilier",
+      texte: 'Ce que vos biens valent, doivent et rapportent : rendement, cash-flow, plus-value de revente.' },
+    { img: 'pilotia-accueil', app: 'PILOTIA', c: '#12948a', titre: 'Le réel face au prévu',
+      texte: "Chaque mois, ce qui se passe comparé à ce que vous aviez prévu." },
+  ];
+  const $ = s => document.querySelector(s), liste = $('#etapes'), vue = $('#vue');
+  let n = 0, minuteur = null;
+
+  ETAPES.forEach((e, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<button style="--c:${e.c}"><b>${e.app === 'CREATA' && i === 2 ? 'Faisabilité' : e.app}</b></button>`;
+    li.firstChild.addEventListener('click', () => aller(i));
+    liste.append(li);
+    const img = document.createElement('img');
+    img.src = `img/${e.img}.jpg`; img.alt = `${e.app} : ${e.titre}`; img.decoding = 'async';
+    if (i > 1) img.loading = 'lazy';
+    vue.append(img);
+  });
+  const boutons = [...liste.querySelectorAll('button')], imgs = [...vue.querySelectorAll('img')];
+
+  function aller(i) {
+    n = (i + ETAPES.length) % ETAPES.length;
+    const e = ETAPES[n];
+    boutons.forEach((b, k) => b.toggleAttribute('aria-current', k === n));
+    imgs.forEach((im, k) => im.classList.toggle('on', k === n));
+    if (imgs[n + 1]) imgs[n + 1].loading = 'eager';
+    $('#app').textContent = e.app; $('#app').style.color = e.c;
+    $('#titre').textContent = e.titre; $('#texte').textContent = e.texte;
+    $('#barreTitre').textContent = e.app === "L'Atelier" ? "L'Atelier" : `L'Atelier — ${e.app}`;
+    $('#compte').textContent = `${n + 1} / ${ETAPES.length}`;
+    boutons[n].scrollIntoView({ inline: 'nearest', block: 'nearest' });
+  }
+  function auto(oui) {
+    clearInterval(minuteur); minuteur = oui ? setInterval(() => aller(n + 1), 9000) : null;
+    $('#auto').setAttribute('aria-pressed', oui);
+  }
+  $('#prec').addEventListener('click', () => { auto(false); aller(n - 1); });
+  $('#suiv').addEventListener('click', () => { auto(false); aller(n + 1); });
+  $('#auto').addEventListener('click', () => auto(!minuteur));
+  $('#grand').addEventListener('click', () => {
+    const f = $('#fenetre');
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (f.requestFullscreen) f.requestFullscreen();
+    else window.open(imgs[n].src, '_blank');
+  });
+  vue.addEventListener('click', () => $('#grand').click());
+  addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { auto(false); aller(n + 1); }
+    if (e.key === 'ArrowLeft') { auto(false); aller(n - 1); }
+  });
+  let x0 = null;
+  vue.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  vue.addEventListener('touchend', e => {
+    if (x0 === null) return; const d = e.changedTouches[0].clientX - x0;
+    if (Math.abs(d) > 50) { auto(false); aller(n + (d < 0 ? 1 : -1)); } x0 = null;
+  });
+  aller(0);
+})();
+</script>
+</body>
+</html>

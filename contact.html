@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — BudappsAI</title>
+<meta name="description" content="Écrire à BudappsAI : choisir une formule de L'Atelier, poser une question, être prévenu des prochaines applications.">
+<meta name="theme-color" content="#09090b">
+<link rel="canonical" href="https://www.budappsai.com/contact.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="budappsai.css">
+<style>
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;padding:80px 0 120px;align-items:start}
+.contact h1{font-size:clamp(44px,6.5vw,84px);letter-spacing:-.055em;line-height:.98;margin:14px 0 18px}
+.contact .etiquette{text-align:left}
+.intro{color:var(--texte2);font-weight:300;font-size:18px;max-width:460px}
+.coord{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:12px}
+.coord a,.coord div{display:flex;gap:16px;align-items:center;padding:16px 18px;border-radius:16px;border:1px solid var(--bord);background:var(--carte);transition:border-color .25s,background .25s}
+.coord a:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.05)}
+.coord .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;background:linear-gradient(135deg,rgba(109,93,252,.3),rgba(239,111,92,.2));border:1px solid rgba(185,179,255,.25)}
+.coord svg{width:20px;height:20px;color:var(--lilas)}
+.coord small{display:block;color:var(--texte3);font-size:13px}
+.coord span{font-weight:500}
+form{padding:34px}
+.champ{position:relative;margin-bottom:18px}
+.champ input,.champ textarea,.champ select{width:100%;padding:24px 16px 10px;border-radius:14px;border:1px solid var(--bord);background:rgba(0,0,0,.25);
+  color:var(--texte);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;appearance:none}
+.champ textarea{min-height:150px;resize:vertical}
+.champ select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a6a3af' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
+.champ select option{background:#16161c}
+.champ label{position:absolute;left:17px;top:17px;color:var(--texte3);pointer-events:none;transition:all .2s var(--ressort);font-size:16px}
+.champ input:focus,.champ textarea:focus,.champ select:focus{border-color:rgba(185,179,255,.6);box-shadow:0 0 0 4px rgba(109,93,252,.15)}
+.champ input:focus+label,.champ input:not(:placeholder-shown)+label,.champ textarea:focus+label,.champ textarea:not(:placeholder-shown)+label,.champ select+label{top:7px;font-size:12px;color:var(--lilas)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.envoyer{width:100%;height:54px;font-size:16px;margin-top:6px}
+.precision{color:var(--texte3);font-size:13.5px;margin:16px 0 0;line-height:1.55}
+.erreur{color:#f3a38f;font-size:14px;margin:10px 0 0;min-height:1em}
+.merci{display:none;text-align:center;padding:40px 10px}
+.merci svg{width:64px;height:64px;color:#7ee2b0}
+.merci svg path{stroke-dasharray:30;stroke-dashoffset:30;animation:trace .8s var(--ressort) .2s forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+form.fait .formulaire{display:none}
+form.fait .merci{display:block}
+@media (max-width:900px){.contact{grid-template-columns:1fr;gap:40px;padding-top:56px}.deux{grid-template-columns:1fr}form{padding:24px}}
+</style>
+</head>
+<body>
+<div class="ciel" aria-hidden="true"><div class="faisceau f1"></div><div class="faisceau f2"></div><div class="faisceau f3"></div><div class="points"></div><div class="grain"></div></div>
+<!--TETE-->
+<header class="tete">
+  <div class="enveloppe barre">
+    <a class="marque" href="./" aria-label="BudappsAI, accueil"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+    <nav class="liens" aria-label="Navigation principale"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html" aria-current=page>Contact</a></nav>
+    <div class="boutons-tete"><a class="btn demo" href="demo.html">Voir la démo</a><a class="btn btn-lumiere aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-mobile"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html" aria-current=page>Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
+<!--/TETE-->
+
+<main>
+  <div class="enveloppe contact">
+    <div>
+      <div class="etiquette revele">Contact</div>
+      <h1 data-mots>Parlons de <span class="degrade">votre projet</span></h1>
+      <p class="intro revele d3">Une formule à choisir, une question sur L'Atelier, ou l'envie d'être prévenu des prochaines applications : écrivez-nous, la réponse vient d'une personne.</p>
+      <ul class="coord revele d4">
+        <li><a href="mailto:erwan.riquier@budappsai.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div style="all:unset"><small>Courriel</small><span>erwan.riquier@budappsai.com</span></div></a></li>
+        <li><a href="tel:+594694352562"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div style="all:unset"><small>Téléphone</small><span>06 94 35 25 62</span></div></a></li>
+        <li><div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div style="all:unset"><small>Adresse</small><span>15 avenue Jules Ayanne, 97351 Matoury, Guyane</span></div></div></li>
+      </ul>
+    </div>
+
+    <form class="carte revele d2" id="formulaire" novalidate>
+      <div class="formulaire">
+        <div class="deux">
+          <div class="champ"><input id="nom" name="nom" placeholder=" " autocomplete="name"><label for="nom">Votre nom</label></div>
+          <div class="champ"><input id="structure" name="structure" placeholder=" " autocomplete="organization"><label for="structure">Structure (facultatif)</label></div>
+        </div>
+        <div class="champ">
+          <select id="sujet" name="sujet">
+            <option value="question">Une question sur L'Atelier</option>
+            <option value="standard">Je choisis la formule Standard</option>
+            <option value="pro">Je choisis la formule Pro</option>
+            <option value="structures">Formule Structures (plusieurs postes)</option>
+            <option value="prevenu">Être prévenu des prochaines applications</option>
+            <option value="autre">Autre chose</option>
+          </select><label for="sujet">Sujet</label>
+        </div>
+        <div class="champ"><textarea id="message" name="message" placeholder=" "></textarea><label for="message">Votre message</label></div>
+        <button class="btn btn-lumiere envoyer" type="submit">Préparer le courriel <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        <p class="erreur" id="erreur" role="alert"></p>
+        <p class="precision">Ce site n'envoie rien et ne garde rien : le bouton ouvre votre messagerie avec le courriel prêt, et c'est vous qui l'envoyez. Voir la <a href="confidentialite.html" style="text-decoration:underline">confidentialité</a>.</p>
+      </div>
+      <div class="merci" aria-live="polite">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>
+        <h2 style="font-size:32px;margin:14px 0 8px">Votre messagerie s'est ouverte</h2>
+        <p class="chapeau" style="font-size:16px">Il ne reste qu'à envoyer. Rien ne s'est ouvert ? Écrivez directement à <a href="mailto:erwan.riquier@budappsai.com" style="color:var(--lilas)">erwan.riquier@budappsai.com</a>.</p>
+        <button class="btn" type="button" id="refaire" style="margin-top:22px">Modifier le message</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<!--PIED-->
+<footer class="pied">
+  <div class="enveloppe">
+    <div class="colonnes">
+      <div><a class="marque" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+        <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
+      <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:erwan.riquier@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="geant" aria-hidden="true">budappsai</div>
+    <div class="bas"><span>© <span data-annee>2026</span> BudappsAI</span><span>Aucun cookie, aucun traceur.</span></div>
+  </div>
+</footer>
+<!--/PIED-->
+
+<script src="budappsai.js"></script>
+<script>
+(() => {
+  const f = document.getElementById('formulaire'), sujet = document.getElementById('sujet');
+  const OBJETS = { question: "Question sur L'Atelier", standard: 'Formule Standard', pro: 'Formule Pro', structures: 'Formule Structures',
+                   prevenu: 'Être prévenu des prochaines applications', autre: 'Message depuis le site' };
+  // Le sujet peut venir d'un bouton de l'accueil (« Choisir Pro »…)
+  const venu = new URLSearchParams(location.search).get('sujet');
+  if (venu && OBJETS[venu]) sujet.value = venu;
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const nom = f.nom.value.trim(), msg = f.message.value.trim(), err = document.getElementById('erreur');
+    if (!msg && sujet.value !== 'prevenu') { err.textContent = 'Écrivez quelques mots dans le message.'; f.message.focus(); return; }
+    err.textContent = '';
+    const corps = [msg || 'Merci de me prévenir à la sortie des prochaines applications BudappsAI.', '', nom && `— ${nom}`, f.structure.value.trim()].filter(x => x !== '' && x !== undefined && x !== false).join('\n');
+    location.href = 'mailto:erwan.riquier@budappsai.com?subject=' + encodeURIComponent(OBJETS[sujet.value]) + '&body=' + encodeURIComponent(corps);
+    setTimeout(() => f.classList.add('fait'), 400);
+  });
+  document.getElementById('refaire').addEventListener('click', () => f.classList.remove('fait'));
+})();
+</script>
+</body>
+</html>

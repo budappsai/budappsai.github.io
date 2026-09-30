@@ -66,7 +66,7 @@ form.fait .merci{display:block}
       <h1 data-mots>Parlons de <span class="degrade">votre projet</span></h1>
       <p class="intro revele d3">Une formule à choisir, une question sur L'Atelier, ou l'envie d'être prévenu des prochaines applications : écrivez-nous, la réponse vient d'une personne.</p>
       <ul class="coord revele d4">
-        <li><a href="mailto:erwan.riquier@budappsai.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div style="all:unset"><small>Courriel</small><span>erwan.riquier@budappsai.com</span></div></a></li>
+        <li><a href="mailto:contact@budappsai.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div style="all:unset"><small>Courriel</small><span>contact@budappsai.com</span></div></a></li>
         <li><a href="tel:+594694352562"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div style="all:unset"><small>Téléphone</small><span>06 94 35 25 62</span></div></a></li>
         <li><div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div style="all:unset"><small>Adresse</small><span>15 avenue Jules Ayanne, 97351 Matoury, Guyane</span></div></div></li>
       </ul>
@@ -96,7 +96,7 @@ form.fait .merci{display:block}
       <div class="merci" aria-live="polite">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>
         <h2 style="font-size:32px;margin:14px 0 8px">Votre messagerie s'est ouverte</h2>
-        <p class="chapeau" style="font-size:16px">Il ne reste qu'à envoyer. Rien ne s'est ouvert ? Écrivez directement à <a href="mailto:erwan.riquier@budappsai.com" style="color:var(--lilas)">erwan.riquier@budappsai.com</a>.</p>
+        <p class="chapeau" style="font-size:16px">Il ne reste qu'à envoyer. Rien ne s'est ouvert ? Écrivez directement à <a href="mailto:contact@budappsai.com" style="color:var(--lilas)">contact@budappsai.com</a>.</p>
         <button class="btn" type="button" id="refaire" style="margin-top:22px">Modifier le message</button>
       </div>
     </form>
@@ -110,7 +110,7 @@ form.fait .merci{display:block}
       <div><a class="marque" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
       <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
-      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:erwan.riquier@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
       <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="geant" aria-hidden="true">budappsai</div>
@@ -134,7 +134,7 @@ form.fait .merci{display:block}
     if (!msg && sujet.value !== 'prevenu') { err.textContent = 'Écrivez quelques mots dans le message.'; f.message.focus(); return; }
     err.textContent = '';
     const corps = [msg || 'Merci de me prévenir à la sortie des prochaines applications BudappsAI.', '', nom && `— ${nom}`, f.structure.value.trim()].filter(x => x !== '' && x !== undefined && x !== false).join('\n');
-    location.href = 'mailto:erwan.riquier@budappsai.com?subject=' + encodeURIComponent(OBJETS[sujet.value]) + '&body=' + encodeURIComponent(corps);
+    location.href = 'mailto:contact@budappsai.com?subject=' + encodeURIComponent(OBJETS[sujet.value]) + '&body=' + encodeURIComponent(corps);
     setTimeout(() => f.classList.add('fait'), 400);
   });
   document.getElementById('refaire').addEventListener('click', () => f.classList.remove('fait'));

@@ -34,7 +34,7 @@ PIED = f'''<footer class="pied">
       <div><a class="marque" href="./">{LOGO}<span class="nom">Budapps<span class="ai">AI</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
       <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
-      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:erwan.riquier@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
       <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="geant" aria-hidden="true">budappsai</div>

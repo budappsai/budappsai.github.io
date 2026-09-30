@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Organization","name":"BudappsAI","url":"https://www.budappsai.com/","logo":"https://www.budappsai.com/favicon.svg","email":"erwan.riquier@budappsai.com",
+ {"@type":"Organization","name":"BudappsAI","url":"https://www.budappsai.com/","logo":"https://www.budappsai.com/favicon.svg","email":"contact@budappsai.com",
   "address":{"@type":"PostalAddress","streetAddress":"15 avenue Jules Ayanne","postalCode":"97351","addressLocality":"Matoury","addressRegion":"Guyane","addressCountry":"FR"}},
  {"@type":"SoftwareApplication","name":"L'Atelier","applicationCategory":"BusinessApplication","operatingSystem":"macOS, Windows",
   "description":"Accompagner un projet d'entreprise : business plan, financement, obligations juridiques, bâtiment, énergie, immobilier et pilotage, dans un même dossier.",
@@ -50,7 +50,7 @@
     <h1 data-mots>Des applications pour <span class="degrade">décider juste</span></h1>
     <p class="sous revele d3">BudappsAI conçoit des logiciels métier où chaque chiffre montre d'où il vient.</p>
     <div class="actions revele d4">
-      <button class="btn btn-lumiere aimant" id="lancer" type="button"><span class="onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Écouter la présentation <small>26 s</small></button>
+      <button class="btn btn-lumiere aimant" id="lancer" type="button"><span class="onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Écouter la présentation <small>29 s</small></button>
       <a class="btn aimant" href="demo.html">Parcourir la démo <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
     </div>
     <div class="scene revele d5">
@@ -112,7 +112,7 @@
       <div><a class="marque" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
       <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
-      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:erwan.riquier@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
       <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="geant" aria-hidden="true">budappsai</div>
@@ -122,7 +122,7 @@
 <!--/PIED-->
 
 <div class="barre-bas" id="barreBas"><div class="enveloppe">
-  <button type="button" id="lancerBas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>La présentation en 26 secondes</button>
+  <button type="button" id="lancerBas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>La présentation en 29 secondes</button>
   <a href="demo.html">Démo gratuite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
 </div></div>
 
@@ -155,7 +155,7 @@
   <div class="cin-bas">
     <button type="button" id="cinLecture" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3v14H7zm7 0h3v14h-3z"/></svg></button>
     <div class="cin-piste" id="cinPiste" role="progressbar" aria-label="Avancement"><b id="cinBarre"></b></div>
-    <span class="cin-temps" id="cinTemps">0:00 / 0:26</span>
+    <span class="cin-temps" id="cinTemps">0:00 / 0:29</span>
     <button type="button" id="cinSon" aria-label="Couper le son"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9v6h4l5 4V5L8 9zM17 9a4 4 0 0 1 0 6"/></svg></button>
   </div>
 </div>
@@ -172,15 +172,15 @@
      La voix dure 29,7 s ; chaque phrase a son début et sa fin mesurés
      à la fabrication. Les mots s'allument au rythme de la voix. */
   const SCENES = [
-    { d: 0.3, f: 1.38, texte: 'BudappsAI.', vue: 'logo' },
-    { d: 1.98, f: 5.02, texte: 'Des applications pour décider *vite, *et *juste.', vue: 'logo' },
-    { d: 5.52, f: 9.76, texte: "*L'Atelier suit votre projet d'entreprise, de l'idée au pilotage.", vue: 'ecran', img: 'atelier-accueil' },
-    { d: 10.26, f: 15.24, texte: 'Chiffres, droit, bâtiment, immobilier : tout tient dans un *seul *dossier.', vue: 'ecran', puces: true,
+    { d: 0.3, f: 2.13, texte: 'Bienvenue chez BudappsAI.', vue: 'logo' },
+    { d: 2.68, f: 6.59, texte: 'Ici, on crée des applications pour décider *vite, *et *juste.', vue: 'logo' },
+    { d: 7.04, f: 12.9, texte: "La première, *L'Atelier, vous accompagne de l'idée jusqu'au pilotage de votre entreprise.", vue: 'ecran', img: 'atelier-accueil' },
+    { d: 13.35, f: 18.45, texte: 'Chiffres, droit, bâtiment, immobilier : tout se retrouve dans un *seul *dossier.', vue: 'ecran', puces: true,
       suite: [[0, 'creata-accueil'], [1, 'juridia-accueil'], [2, 'btpedia-accueil'], [3, 'patrimonia-accueil']] },
-    { d: 15.74, f: 17.69, texte: "Chaque chiffre montre *d'où *il *vient.", vue: 'ecran', img: 'creata-faisabilite', zoom: true },
-    { d: 18.19, f: 19.42, texte: 'Vos données restent *chez *vous.', vue: 'verrou' },
-    { d: 19.92, f: 22.72, texte: 'Essayez la démo *gratuite, ici même.', vue: 'ecran', img: 'pilotia-accueil' },
-    { d: 23.32, f: 25.49, texte: 'BudappsAI. Décidez *plus *vite.', vue: 'fin' },
+    { d: 18.9, f: 20.99, texte: "Et chaque chiffre vous montre *d'où *il *vient.", vue: 'ecran', img: 'creata-faisabilite', zoom: true },
+    { d: 21.44, f: 23.74, texte: 'Vos données, elles, restent *chez *vous.', vue: 'verrou' },
+    { d: 24.19, f: 26.06, texte: "Essayez la démo. *C'est *gratuit.", vue: 'ecran', img: 'pilotia-accueil' },
+    { d: 26.66, f: 28.74, texte: 'BudappsAI. Décidez *plus *vite.', vue: 'fin' },
   ];
   const cin = $('#cinema'), texte = $('#cinTexte'), barre = $('#cinBarre'), temps = $('#cinTemps'), flash = $('#cinFlash');
   const imgs = [...document.querySelectorAll('#cinImages img')], puces = [...document.querySelectorAll('#cinPuces span')];
@@ -219,7 +219,7 @@
         puces.forEach((p, j) => p.classList.toggle('on', !!s.suite[j] && dits > s.suite[j][0]));
       }
     }
-    const d = voix.duration || 25.9;
+    const d = voix.duration || 29.1;
     barre.style.transform = `scaleX(${borne(t / d)})`; temps.textContent = `${mmss(t)} / ${mmss(d)}`;
   }
   const tourner = () => { image(voix.currentTime); if (!voix.paused) boucle = requestAnimationFrame(tourner); };
@@ -288,7 +288,7 @@
     $('#cinSon').setAttribute('aria-label', coupe ? 'Remettre le son' : 'Couper le son'); $('#cinSon').style.opacity = coupe ? .5 : 1;
   });
   $('#cinPiste').addEventListener('click', e => {
-    const r = e.currentTarget.getBoundingClientRect(); voix.currentTime = borne((e.clientX - r.left) / r.width) * (voix.duration || 25.9);
+    const r = e.currentTarget.getBoundingClientRect(); voix.currentTime = borne((e.clientX - r.left) / r.width) * (voix.duration || 29.1);
     courante = -1; cin.classList.remove('termine'); image(voix.currentTime);
   });
   addEventListener('keydown', e => {

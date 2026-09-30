@@ -13,19 +13,20 @@ import array, os, re, subprocess, sys, tempfile, wave
 
 VOIX = sys.argv[1] if len(sys.argv) > 1 else 'Chantal (Enhanced)'
 DEBIT = sys.argv[2] if len(sys.argv) > 2 else '175'
+ESSAI = sys.argv[3] if len(sys.argv) > 3 else None
 VOLUME = 0.55                     # 1 = niveau d'origine de `say`
 TAUX = 24000
 PHRASES = [                       # ce que la voix DIT (orthographe phonétique)
-    "Beudapps, A. I.",
-    "Des applications pour décider vite, et juste.",
-    "L'Atelier suit votre projet d'entreprise, de l'idée au pilotage.",
-    "Chiffres, droit, bâtiment, immobilier : tout tient dans un seul dossier.",
-    "Chaque chiffre montre d'où il vient.",
-    "Vos données restent chez vous.",
-    "Essayez la démo gratuite, ici même.",
+    "Bienvenue chez Beudapps, A. I.",
+    "Ici, on crée des applications pour décider vite, et juste.",
+    "La première, L'Atelier, vous accompagne de l'idée, jusqu'au pilotage de votre entreprise.",
+    "Chiffres, droit, bâtiment, immobilier : tout se retrouve dans un seul dossier.",
+    "Et chaque chiffre vous montre d'où il vient.",
+    "Vos données, elles, restent chez vous.",
+    "Essayez la démo. C'est gratuit.",
     "Beudapps, A. I. Décidez plus vite.",
 ]
-SILENCES = [0.3, 0.6, 0.5, 0.5, 0.5, 0.5, 0.5, 0.6]
+SILENCES = [0.3, 0.55, 0.45, 0.45, 0.45, 0.45, 0.45, 0.6]
 ICI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 with tempfile.TemporaryDirectory() as tmp:
@@ -44,7 +45,10 @@ with tempfile.TemporaryDirectory() as tmp:
     if t > 30:
         sys.exit(f'Trop long : {t:.1f} s (30 s au plus). Montez le débit.')
     subprocess.run(['afconvert', '-f', 'm4af', '-d', 'aac', '-b', '64000', sortie,
-                    os.path.join(ICI, 'media', 'presentation.m4a')], check=True)
+                    ESSAI or os.path.join(ICI, 'media', 'presentation.m4a')], check=True)
+if ESSAI:
+    print(f'{VOIX} à {DEBIT} : {t:.1f} s -> {ESSAI} ; marques {marques}')
+    sys.exit(0)
 
 page = os.path.join(ICI, 'index.html')
 html = open(page, encoding='utf-8').read()

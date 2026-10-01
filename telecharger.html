@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Télécharger L'Atelier — BudappsAI</title>
+<meta name="description" content="Télécharger L'Atelier pour Mac (Apple Silicon ou Intel) ou Windows, l'installer et le mettre à jour. L'application s'ouvre avec la licence reçue après l'abonnement.">
+<meta name="theme-color" content="#09090b">
+<link rel="canonical" href="https://www.budappsai.com/telecharger.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="budappsai.css">
+<style>
+.paquets{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.paquet{display:flex;flex-direction:column;align-items:flex-start}
+.paquet .os{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--fond3);border:1px solid var(--bord)}
+.paquet .os svg{width:26px;height:26px}
+.paquet h3{margin-top:16px}
+.paquet .poids{color:var(--texte3);font-size:13.5px;margin:2px 0 18px}
+.paquet p{flex:1}
+.paquet .btn{margin-top:20px;width:100%}
+.paquet.conseille{border-color:rgba(185,179,255,.45);background:linear-gradient(180deg,rgba(109,93,252,.12),rgba(255,255,255,.02))}
+.paquet .pastille-c{display:none;position:absolute;top:22px;right:22px;font-size:12px;padding:4px 10px;border-radius:999px;color:#f3d9a4;border:1px solid rgba(243,217,164,.35)}
+.paquet.conseille .pastille-c{display:inline-block}
+.version{display:inline-flex;gap:10px;align-items:center;margin-top:16px;font-size:14px;color:var(--texte2)}
+.version b{color:var(--texte)}
+.licence{margin-top:28px;padding:18px 22px;border-radius:16px;border:1px solid rgba(126,226,176,.3);background:rgba(47,182,124,.07);color:var(--texte2);font-size:16px}
+.licence strong{color:var(--texte)}
+.marche{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.marche ol{margin:12px 0 0;padding-left:20px;color:var(--texte2);font-weight:300}
+.marche li{margin:9px 0}
+.marche li strong{color:var(--texte);font-weight:600}
+.marche h3{margin-top:0}
+@media (max-width:900px){.paquets,.marche{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="lecteur-seul" href="#contenu">Aller au contenu</a>
+<div class="ciel" aria-hidden="true"><div class="points"></div></div>
+<!--TETE-->
+<header class="tete">
+  <div class="enveloppe barre">
+    <a class="marque" href="./" aria-label="BudappsAI, accueil"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+    <nav class="liens" aria-label="Navigation principale"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a></nav>
+    <div class="boutons-tete"><a class="btn demo" href="demo.html">Voir la démo</a><a class="btn btn-lumiere aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-mobile"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
+<!--/TETE-->
+
+<main id="contenu">
+  <div class="enveloppe page-tete">
+    <div class="etiquette revele">Télécharger</div>
+    <h1 data-mots>Installer <span class="degrade">L'Atelier</span></h1>
+    <p class="chapeau revele d3">Choisissez le fichier de votre ordinateur, installez, puis collez la licence reçue par courriel.</p>
+    <div class="version revele d4">Version <b>1.26.0</b> · publiée le 30 septembre 2026</div>
+  </div>
+
+  <section style="padding-top:0">
+    <div class="enveloppe">
+      <div class="paquets">
+        <div class="carte paquet revele" id="p-arm">
+          <span class="pastille-c">Pour votre ordinateur</span>
+          <span class="os"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.4-.9-2.4-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg></span>
+          <h3>Mac à puce Apple</h3>
+          <div class="poids">M1, M2, M3, M4… · DMG · 33 Mo</div>
+          <p>Le Mac le plus courant depuis 2021. Pour vérifier : menu Pomme › À propos de ce Mac, ligne « Puce ».</p>
+          <a class="btn btn-lumiere" href="https://github.com/budappsai/telechargements/releases/latest/download/ATELIER-macOS-AppleSilicon.dmg">Télécharger pour Mac Apple</a>
+        </div>
+        <div class="carte paquet revele d1" id="p-intel">
+          <span class="pastille-c">Pour votre ordinateur</span>
+          <span class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
+          <h3>Mac à processeur Intel</h3>
+          <div class="poids">Mac de 2020 et avant · DMG · 31 Mo</div>
+          <p>Si « À propos de ce Mac » indique « Processeur … Intel ».</p>
+          <a class="btn" href="https://github.com/budappsai/telechargements/releases/latest/download/ATELIER-macOS-Intel.dmg">Télécharger pour Mac Intel</a>
+        </div>
+        <div class="carte paquet revele d2" id="p-win">
+          <span class="pastille-c">Pour votre ordinateur</span>
+          <span class="os"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.5v7H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg></span>
+          <h3>Windows</h3>
+          <div class="poids">Windows 10 et 11 · ZIP · 33 Mo</div>
+          <p>Un dossier prêt à l'emploi, sans installateur : on le décompresse et on lance L'Atelier.</p>
+          <a class="btn" href="https://github.com/budappsai/telechargements/releases/latest/download/ATELIER-Windows.zip">Télécharger pour Windows</a>
+        </div>
+      </div>
+
+      <p class="licence revele"><strong>Une licence est nécessaire.</strong> Elle vous est envoyée par courriel après l'abonnement (voir les <a href="tarifs.html" style="text-decoration:underline">tarifs</a>). Sans licence, L'Atelier s'installe mais ne s'ouvre pas : pour découvrir avant d'acheter, parcourez la <a href="demo.html" style="text-decoration:underline">démo guidée</a>.</p>
+
+      <div class="marche">
+        <div class="carte revele">
+          <h3>Sur Mac</h3>
+          <ol>
+            <li>Ouvrez le fichier téléchargé, puis <strong>glissez L'Atelier sur le dossier Applications</strong>.</li>
+            <li>Lancez-le depuis Applications. La première fois, si macOS refuse de l'ouvrir : <strong>Réglages Système › Confidentialité et sécurité</strong>, puis « Ouvrir quand même ».</li>
+            <li>Collez votre licence : c'est prêt.</li>
+            <li><strong>Mise à jour</strong> : L'Atelier vous prévient au démarrage. Fermez sa fenêtre, téléchargez, et glissez par-dessus en acceptant de remplacer. Vos dossiers ne bougent pas.</li>
+          </ol>
+        </div>
+        <div class="carte revele d1">
+          <h3>Sur Windows</h3>
+          <ol>
+            <li>Faites un clic droit sur le fichier téléchargé › <strong>Extraire tout</strong>.</li>
+            <li>Ouvrez le dossier ATELIER et lancez <strong>ATELIER.exe</strong>. Si Windows affiche « Windows a protégé votre ordinateur » : « Informations complémentaires », puis « Exécuter quand même ».</li>
+            <li>Collez votre licence : c'est prêt.</li>
+            <li><strong>Mise à jour</strong> : L'Atelier vous prévient au démarrage. Fermez-le, téléchargez, et remplacez l'ancien dossier par le nouveau. Vos dossiers ne bougent pas.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="note revele">Les fichiers sont hébergés sur GitHub, dans le dépôt public de BudappsAI, qui ne contient aucun code source. En téléchargeant, vous acceptez les <a href="cgv.html" style="text-decoration:underline">conditions générales</a>.</p>
+    </div>
+  </section>
+</main>
+
+<!--PIED-->
+<footer class="pied">
+  <div class="enveloppe">
+    <div class="colonnes">
+      <div><a class="marque" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+        <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
+      <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="telecharger.html">Télécharger</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="geant" aria-hidden="true">budappsai</div>
+    <div class="bas"><span>© <span data-annee>2026</span> BudappsAI</span><span>Aucun cookie, aucun traceur.</span></div>
+  </div>
+</footer>
+<!--/PIED-->
+<script src="budappsai.js"></script>
+<script>
+// On met en avant le fichier de cet ordinateur. Le navigateur ne dit pas
+// toujours si un Mac est Apple ou Intel : dans le doute, on ne conseille rien.
+(async () => {
+  const ua = navigator.userAgent, c = id => document.getElementById(id).classList.add('conseille');
+  if (/Windows/.test(ua)) return c('p-win');
+  if (!/Mac/.test(ua)) return;
+  try {
+    const h = navigator.userAgentData && await navigator.userAgentData.getHighEntropyValues(['architecture']);
+    if (h && h.architecture === 'arm') return c('p-arm');
+    if (h && h.architecture === 'x86') return c('p-intel');
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

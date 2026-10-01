@@ -129,3 +129,11 @@
   }), { threshold: .6 });
   document.querySelectorAll('[data-compte]').forEach(el => io.observe(el));
 })();
+
+// Un lien vers une section (« atelier.html#international ») : le navigateur
+// saute avant que la page ait pris sa hauteur (zoom collant, images), et la
+// section n'est jamais atteinte. On y va une fois la page posee.
+addEventListener('load', () => {
+  const cible = location.hash && document.getElementById(location.hash.slice(1));
+  if (cible) setTimeout(() => cible.scrollIntoView({ block: 'start' }), 120);
+});

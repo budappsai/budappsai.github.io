@@ -4,77 +4,99 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Démo guidée de L'Atelier — BudappsAI</title>
-<meta name="description" content="Parcourez L'Atelier en huit étapes, sur un projet d'exemple : business plan, faisabilité, droit, bâtiment, énergie, immobilier et pilotage. Gratuit, sans installation.">
+<meta name="description" content="Visite commentée de L'Atelier sur un projet d'exemple : business plan, faisabilité, droit, bâtiment, énergie, immobilier et pilotage. Gratuit, sans installation.">
 <meta name="theme-color" content="#09090b">
 <link rel="canonical" href="https://www.budappsai.com/demo.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Démo guidée de L'Atelier — BudappsAI">
-<meta property="og:description" content="Huit étapes sur un projet d'exemple, gratuitement, sans installation.">
+<meta property="og:description" content="Une visite commentée, écran par écran, gratuitement et sans installation.">
 <meta property="og:image" content="https://www.budappsai.com/img/partage.jpg">
 <link rel="stylesheet" href="budappsai.css">
 <style>
-.tete-demo{text-align:center;padding:56px 0 8px}
-.tete-demo h1{font-size:clamp(36px,5.4vw,68px);letter-spacing:-.05em;line-height:1;margin:12px auto 12px;max-width:900px}
+.tete-demo{text-align:center;padding:52px 0 6px}
+.tete-demo h1{font-size:clamp(36px,5.4vw,66px);letter-spacing:-.05em;line-height:1;margin:12px auto 12px;max-width:900px}
 .tete-demo .chapeau{font-size:17px}
 .exemple{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;color:var(--texte3)}
 .exemple i{width:8px;height:8px;border-radius:50%;background:var(--vert)}
 
-/* Les étapes, en onglets au-dessus de l'écran */
-.etapes{list-style:none;margin:34px 0 14px;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;counter-reset:e}
+/* Les étapes */
+.etapes{list-style:none;margin:30px 0 14px;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;counter-reset:e}
 .etapes li{counter-increment:e;flex:1 0 auto}
 .etapes button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:10px;align-items:center;width:100%;
   padding:10px 14px;border-radius:14px;border:1px solid var(--bord);background:rgba(255,255,255,.02);color:var(--texte2);transition:background .2s,border-color .2s,color .2s}
-.etapes button::before{content:counter(e);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none;
-  background:var(--fond3);border:1px solid var(--bord)}
+.etapes button::before{content:counter(e);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none;background:var(--fond3);border:1px solid var(--bord)}
 .etapes button:hover{background:rgba(255,255,255,.05);color:var(--texte)}
 .etapes button[aria-current]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 18%,transparent)}
 .etapes button[aria-current]::before{background:var(--c);border-color:transparent;color:#fff}
 .etapes b{font-weight:600;font-size:14px;white-space:nowrap}
 
-/* L'écran : grand, entier, net */
-.fenetre{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#16161b;
-  box-shadow:0 40px 100px -30px rgba(0,0,0,.9)}
-.chrome{height:36px;background:#1c1c22;display:flex;align-items:center;gap:7px;padding:0 12px 0 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+/* La visite : l'écran à gauche, les points à regarder à droite */
+.visite{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px;align-items:start}
+.fenetre{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#16161b;box-shadow:0 40px 100px -30px rgba(0,0,0,.9)}
+.chrome{height:36px;background:#1c1c22;display:flex;align-items:center;gap:7px;padding:0 10px 0 14px;border-bottom:1px solid rgba(255,255,255,.06)}
 .chrome i{width:11px;height:11px;border-radius:50%}
 .chrome i:nth-child(1){background:#ff5f57}.chrome i:nth-child(2){background:#febc2e}.chrome i:nth-child(3){background:#28c840}
 .chrome span{margin:0 auto;font-size:12.5px;color:var(--texte2);padding:3px 14px;border-radius:8px;background:rgba(255,255,255,.05)}
-.chrome button{all:unset;cursor:pointer;display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--texte2);padding:4px 10px;border-radius:8px}
+.chrome button{all:unset;cursor:pointer;display:grid;place-items:center;width:30px;height:28px;border-radius:8px;color:var(--texte2)}
 .chrome button:hover{background:rgba(255,255,255,.08);color:#fff}
 .chrome button svg{width:15px;height:15px}
-.vue{position:relative;display:grid}
-.vue img{grid-area:1/1;width:100%;height:auto;opacity:0;transition:opacity .45s}
-.vue img.on{opacity:1}
-.fenetre:fullscreen{border-radius:0;border:0;background:#0b0b0e;display:flex;flex-direction:column}
-.fenetre:fullscreen .vue{flex:1;place-items:center;min-height:0}
-.fenetre:fullscreen .vue img{max-height:calc(100vh - 36px);width:auto;max-width:100%;margin:auto}
-
-/* La légende, sous l'écran */
-.legende{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-top:24px}
-.legende .app{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
-.legende h2{text-align:left;font-size:clamp(24px,2.8vw,34px);margin:6px 0 6px;max-width:none}
-.legende p{margin:0;color:var(--texte2);font-weight:300;font-size:17.5px;max-width:720px}
-.commandes{display:flex;gap:8px;align-items:center}
-.rond{width:52px;height:52px;border-radius:50%;border:1px solid var(--bord);background:rgba(255,255,255,.04);display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.vue{position:relative;aspect-ratio:16/10;overflow:hidden;background:#eceeed}
+.plan{position:absolute;inset:0;transform-origin:50% 50%;transition:transform .75s var(--ressort)}
+.plan img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.plan img.on{opacity:1}
+.point{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:0;cursor:pointer;padding:0;
+  background:var(--c,#6d5dfc);color:#fff;font:700 13px/30px var(--police);box-shadow:0 0 0 4px rgba(255,255,255,.85),0 6px 18px rgba(0,0,0,.35);
+  transform:scale(var(--inv,1));transition:transform .75s var(--ressort),background .2s}
+.point::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--c,#6d5dfc);animation:pouls-point 2s ease-out infinite;pointer-events:none}
+@keyframes pouls-point{from{transform:scale(.8);opacity:.9}to{transform:scale(1.8);opacity:0}}
+.point.actif{background:#0b0b0e}
+.point.actif::after{animation:none;opacity:0}
+.bulle{position:absolute;z-index:3;max-width:min(340px,70%);padding:14px 16px;border-radius:14px;background:rgba(12,12,16,.94);border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
+.bulle.on{opacity:1;transform:none}
+.bulle b{display:block;font-size:15.5px;margin-bottom:4px}
+.bulle p{margin:0;color:var(--texte2);font-size:14.5px;font-weight:300;line-height:1.45}
+.commandes{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap}
+.commandes .groupe{display:flex;gap:8px;align-items:center}
+.rond{width:48px;height:48px;border-radius:50%;border:1px solid var(--bord);background:rgba(255,255,255,.04);display:grid;place-items:center;cursor:pointer;transition:background .2s;color:var(--texte)}
 .rond:hover{background:rgba(255,255,255,.1)}
 .rond svg{width:20px;height:20px}
 .rond.suivant{background:var(--texte);color:#0b0b0e;border-color:transparent}
 .rond.suivant:hover{background:#fff}
-.compte{font-variant-numeric:tabular-nums;color:var(--texte3);font-size:14px;min-width:44px;text-align:center}
-.auto{all:unset;cursor:pointer;font-size:13.5px;color:var(--texte3);display:inline-flex;gap:8px;align-items:center;margin-top:18px}
-.auto:hover{color:var(--texte)}
-.auto i{width:30px;height:18px;border-radius:9px;background:var(--fond3);border:1px solid var(--bord);position:relative;transition:background .2s}
-.auto i::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--texte2);transition:transform .2s}
-.auto[aria-pressed=true] i{background:var(--violet)}
-.auto[aria-pressed=true] i::after{transform:translateX(12px);background:#fff}
+.compte{font-variant-numeric:tabular-nums;color:var(--texte3);font-size:14px;min-width:120px;text-align:center}
+.lien{all:unset;cursor:pointer;font-size:14px;color:var(--texte2);padding:10px 14px;border-radius:999px;border:1px solid var(--bord)}
+.lien:hover{color:var(--texte);background:rgba(255,255,255,.05)}
+.lien[aria-pressed=true]{color:#fff;border-color:var(--violet);background:rgba(109,93,252,.18)}
+
+.panneau{position:sticky;top:90px;padding:24px}
+.panneau .app{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.panneau h2{text-align:left;font-size:26px;margin:6px 0 8px;max-width:none}
+.panneau > p{margin:0;color:var(--texte2);font-weight:300;font-size:16px}
+.panneau h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--texte3);margin:22px 0 8px;font-weight:600}
+.liste-points{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.liste-points button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:26px 1fr;gap:10px;width:100%;padding:10px 12px;border-radius:12px;border:1px solid transparent;transition:background .2s,border-color .2s}
+.liste-points button:hover{background:rgba(255,255,255,.04)}
+.liste-points button[aria-current]{background:rgba(255,255,255,.06);border-color:var(--bord)}
+.liste-points .n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;background:var(--c)}
+.liste-points b{display:block;font-size:14.5px;font-weight:600}
+.liste-points span{display:block;font-size:13.5px;color:var(--texte3);font-weight:300;line-height:1.4;margin-top:2px}
+.fenetre:fullscreen{border-radius:0;border:0;display:flex;flex-direction:column;background:#0b0b0e}
+.fenetre:fullscreen .vue{flex:1;aspect-ratio:auto}
+.fenetre:fullscreen .plan img{object-fit:contain}
 .fin-visite{padding:90px 0 110px}
-@media (max-width:900px){
-  .legende{grid-template-columns:1fr}
+@media (max-width:980px){
+  .visite{grid-template-columns:1fr}
+  .panneau{position:static}
+  .bulle{display:none}
   .etapes li{flex:none}
   .chrome span{display:none}
+  .point{width:24px;height:24px;margin:-12px 0 0 -12px;font-size:11px;line-height:24px}
 }
+@media (prefers-reduced-motion:reduce){.point::after{animation:none}}
 </style>
 </head>
 <body>
+<a class="lecteur-seul" href="#contenu">Aller au contenu</a>
 <div class="ciel" aria-hidden="true"><div class="points"></div></div>
 <!--TETE-->
 <header class="tete">
@@ -88,33 +110,49 @@
 <div class="menu-mobile"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html" aria-current=page>Démo</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
 <!--/TETE-->
 
-<main>
+<main id="contenu">
   <div class="enveloppe">
     <div class="tete-demo">
       <div class="etiquette revele">Démo guidée</div>
-      <h1 data-mots>L'Atelier, en <span class="degrade">huit étapes</span></h1>
-      <p class="chapeau revele d2">Un projet d'exemple, du premier écran au pilotage. Passez d'une étape à l'autre avec les flèches, ou ouvrez l'écran en grand.</p>
+      <h1 data-mots>L'Atelier, <span class="degrade">écran par écran</span></h1>
+      <p class="chapeau revele d2">Cliquez sur les points numérotés : l'écran s'agrandit sur ce qu'il faut regarder. Ou lancez la visite et laissez-vous guider.</p>
       <div class="exemple revele d3"><i></i>Projet d'exemple : aucune donnée réelle</div>
     </div>
 
     <ol class="etapes" id="etapes" aria-label="Les étapes de la démo"></ol>
 
-    <div class="fenetre" id="fenetre">
-      <div class="chrome"><i></i><i></i><i></i><span id="barreTitre">L'Atelier</span>
-        <button type="button" id="grand" title="Plein écran"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="lecteur-seul">Plein écran</span></button>
+    <div class="visite">
+      <div>
+        <div class="fenetre" id="fenetre">
+          <div class="chrome"><i></i><i></i><i></i><span id="barreTitre">L'Atelier</span>
+            <button type="button" id="grand" title="Plein écran" aria-label="Plein écran"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+          </div>
+          <div class="vue" id="vue">
+            <div class="plan" id="plan"></div>
+            <div class="bulle" id="bulle" aria-live="polite"><b id="bulleTitre"></b><p id="bulleTexte"></p></div>
+          </div>
+        </div>
+        <div class="commandes">
+          <div class="groupe">
+            <button class="rond" id="prec" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6 6-6-6 6-6"/></svg></button>
+            <span class="compte" id="compte"></span>
+            <button class="rond suivant" id="suiv" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          </div>
+          <div class="groupe">
+            <button class="lien" id="ensemble" type="button">Vue d'ensemble</button>
+            <button class="lien" id="auto" type="button" aria-pressed="false">Lancer la visite</button>
+          </div>
+        </div>
       </div>
-      <div class="vue" id="vue"></div>
-    </div>
 
-    <div class="legende">
-      <div><div class="app" id="app"></div><h2 id="titre"></h2><p id="texte"></p></div>
-      <div class="commandes">
-        <button class="rond" id="prec" aria-label="Étape précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6 6-6-6 6-6"/></svg></button>
-        <span class="compte" id="compte">1 / 8</span>
-        <button class="rond suivant" id="suiv" aria-label="Étape suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
-      </div>
+      <aside class="carte panneau" id="panneau">
+        <div class="app" id="app"></div>
+        <h2 id="titre"></h2>
+        <p id="texte"></p>
+        <h3>À regarder</h3>
+        <ol class="liste-points" id="listePoints"></ol>
+      </aside>
     </div>
-    <button class="auto" id="auto" type="button" aria-pressed="false"><i></i>Défilement automatique</button>
 
     <section class="fin-visite">
       <div class="carte revele" style="text-align:center;padding:64px 24px;background:radial-gradient(ellipse at 50% 0%,rgba(109,93,252,.3),transparent 60%),var(--fond2)">
@@ -148,76 +186,175 @@
 <script src="budappsai.js"></script>
 <script>
 (() => {
+  // Chaque point : x et y en % de la capture (1600 × 1000).
   const ETAPES = [
     { img: 'atelier-accueil', app: "L'Atelier", c: '#6d5dfc', titre: "L'accueil",
-      texte: "Trois familles d'applications autour du même dossier : finance et juridique, BTP et énergie, gestion et pilotage. Le pays et la langue se choisissent ici." },
+      texte: "Toutes les applications autour du même dossier, et les réglages communs.",
+      points: [
+        [50, 9.5, 'Le pays et la langue', "Les barèmes, le droit et la monnaie suivent le pays choisi. Sept langues."],
+        [28.4, 26, 'Finance et juridique', "CREATA monte l'affaire et son financement, JURIDIA dit ce qui s'impose."],
+        [50, 26, 'BTP et énergie', "BTPEDIA dessine et chiffre, ENERGIA mesure la consommation, l'encyclopédie documente."],
+        [71.5, 26, 'Gestion et pilotage', "PATRIMONIA pour l'immobilier, PILOTIA pour suivre l'activité réelle."],
+        [40, 55.2, 'La veille réglementaire', "Les barèmes et les textes suivis, avec la date de leur dernière vérification."],
+        [40, 72, 'Les dossiers', "Un dossier par client, tous ses projets dedans. Recherche et filtres par année."],
+        [40, 88, 'La sauvegarde', "Une sauvegarde chaque jour, toute seule. Une copie se dépose en un clic."],
+      ] },
     { img: 'creata-accueil', app: 'CREATA', c: '#5b4bd6', titre: 'Le projet prend forme',
-      texte: "Business plan, financement, trésorerie mois par mois : le projet d'exemple est déjà rempli." },
-    { img: 'creata-faisabilite', app: 'CREATA', c: '#5b4bd6', titre: 'Le score de faisabilité',
-      texte: "Le verdict, et le fil du calcul : chaque chiffre montre sa source et sa suite, jusqu'au score." },
+      texte: "Business plan, financement, trésorerie : les projets d'exemple sont déjà remplis.",
+      points: [
+        [28, 28, 'Le business plan', "Territoire, activité, ventes, charges, financement : le prévisionnel sur trois ans."],
+        [72.5, 36, 'Un exemple en un coup d\'œil', "Chiffre d'affaires, charges et résultat, année par année."],
+        [36, 83, 'Vos projets', "Ouvrez un projet d'exemple pour voir un dossier complet."],
+      ] },
+    { img: 'creata-faisabilite', app: 'CREATA', c: '#5b4bd6', titre: 'La faisabilité',
+      texte: "Le verdict, et tout le chemin qui y mène.",
+      points: [
+        [58, 9, 'Les règles du territoire', "Ici la Guyane : TVA, impôt sur les sociétés, taux d'emprunt et avantages fiscaux pris en compte."],
+        [58, 32, 'Le fil du calcul', "Du chiffre d'affaires à la trésorerie : chaque étape est numérotée et se vérifie."],
+        [95, 46, 'Le score de faisabilité', "Le verdict, avec sa raison en clair : ici, le crédit n'est pas couvert."],
+        [57, 60, 'Les chiffres clés', "Chiffre d'affaires, charges, résultat, mensualité, investissement."],
+        [58, 90, 'Ce que ça donne pour vous', "Rémunération, cotisations, impôt, dividendes : ce que le porteur touche vraiment."],
+        [8, 78.5, 'Les exports', "Le dossier en PDF pour la banque, les tableaux en Excel."],
+      ] },
     { img: 'juridia-accueil', app: 'JURIDIA', c: '#e0342f', titre: "Ce que l'activité impose",
-      texte: "Les obligations que déclenche l'activité, chacune avec sa source et sa sanction." },
+      texte: "Les obligations juridiques, fiscales et sociales, dans l'ordre où s'en occuper.",
+      points: [
+        [28, 30, 'Ce que la loi demande', "Quelques questions sur votre situation, et JURIDIA en déduit vos obligations, chacune avec son texte."],
+        [72.5, 42, "L'état de chaque obligation", "Faite, à faire, en retard : on voit tout de suite où agir."],
+        [23, 89, "L'avancement", "Chaque projet montre où il en est."],
+      ] },
     { img: 'btpedia-accueil', app: 'BTPEDIA', c: '#ef8a1f', titre: "Dessiner l'ouvrage",
-      texte: 'Plans, métrés et quantités : le devis découle du dessin.' },
+      texte: "Le métré et le devis découlent du dessin.",
+      points: [
+        [71, 33, 'Le dessin', "Murs, cloisons, toiture, menuiseries : on trace l'ouvrage."],
+        [72.5, 57, 'Le métré', "Les surfaces sortent du dessin, sans rien ressaisir."],
+        [24, 47, 'Plans, 3D et devis', "Les quantités chiffrées poste par poste avec votre base de prix."],
+      ] },
     { img: 'energia-accueil', app: 'ENERGIA', c: '#18a24a', titre: "L'énergie du bâtiment",
-      texte: "La consommation, local par local, et ce qu'elle coûte." },
+      texte: "La consommation, local par local, et ce qu'elle coûte.",
+      points: [
+        [72.5, 38, 'Local par local', "Chaque étage et chaque local, avec sa consommation au mètre carré."],
+        [28, 33, 'Les équipements', "Éclairage, climatisation, prises, groupes électrogènes."],
+        [23, 86, 'Le coût', "La consommation et le coût par mois et par an, au tarif de votre pays."],
+      ] },
     { img: 'patrimonia-accueil', app: 'PATRIMONIA', c: '#12a0e0', titre: "L'investissement immobilier",
-      texte: 'Ce que vos biens valent, doivent et rapportent : rendement, cash-flow, plus-value de revente.' },
+      texte: "Ce que vos biens valent, doivent et rapportent.",
+      points: [
+        [72.5, 33, 'La valeur et le crédit', "Ce que le bien vaut et ce qu'il reste à rembourser, année après année."],
+        [72.5, 55, 'Le patrimoine net', "La différence, à 1 an, 10 ans et 20 ans."],
+        [28, 32, 'Le rendement', "Les quatre étages du rendement, le cash-flow, la revente après impôt."],
+      ] },
     { img: 'pilotia-accueil', app: 'PILOTIA', c: '#12948a', titre: 'Le réel face au prévu',
-      texte: "Chaque mois, ce qui se passe comparé à ce que vous aviez prévu." },
+      texte: "Une fois l'activité lancée, on compare chaque mois.",
+      points: [
+        [72.5, 36, 'Prévu et réel', "Mois par mois, le prévisionnel de CREATA face à ce qui se passe."],
+        [72.5, 53, "L'écart", "L'écart se voit avant de devenir un problème."],
+        [28, 33, 'Relevés et factures', "Importez vos relevés bancaires : la trésorerie se met à jour."],
+      ] },
   ];
-  const $ = s => document.querySelector(s), liste = $('#etapes'), vue = $('#vue');
-  let n = 0, minuteur = null;
+  const ZOOM = 2.1, AUTO = 5200;
+  const $ = s => document.querySelector(s), plan = $('#plan'), vue = $('#vue'), bulle = $('#bulle');
+  const calme = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let e = 0, p = -1, minuteur = null;
 
-  ETAPES.forEach((e, i) => {
+  // Les onglets et les images (chargées une fois)
+  ETAPES.forEach((et, i) => {
     const li = document.createElement('li');
-    li.innerHTML = `<button style="--c:${e.c}"><b>${e.app === 'CREATA' && i === 2 ? 'Faisabilité' : e.app}</b></button>`;
-    li.firstChild.addEventListener('click', () => aller(i));
-    liste.append(li);
+    li.innerHTML = `<button style="--c:${et.c}"><b>${i === 2 ? 'Faisabilité' : et.app}</b></button>`;
+    li.firstChild.addEventListener('click', () => { auto(false); aller(i, -1); });
+    $('#etapes').append(li);
     const img = document.createElement('img');
-    img.src = `img/${e.img}.jpg`; img.alt = `${e.app} : ${e.titre}`; img.decoding = 'async';
-    if (i > 1) img.loading = 'lazy';
-    vue.append(img);
+    img.src = `img/${et.img}.jpg`; img.alt = `${et.app} : ${et.titre}`; img.decoding = 'async'; if (i > 1) img.loading = 'lazy';
+    plan.append(img);
   });
-  const boutons = [...liste.querySelectorAll('button')], imgs = [...vue.querySelectorAll('img')];
+  const onglets = [...document.querySelectorAll('#etapes button')], imgs = [...plan.querySelectorAll('img')];
 
-  function aller(i) {
-    n = (i + ETAPES.length) % ETAPES.length;
-    const e = ETAPES[n];
-    boutons.forEach((b, k) => b.toggleAttribute('aria-current', k === n));
-    imgs.forEach((im, k) => im.classList.toggle('on', k === n));
-    if (imgs[n + 1]) imgs[n + 1].loading = 'eager';
-    $('#app').textContent = e.app; $('#app').style.color = e.c;
-    $('#titre').textContent = e.titre; $('#texte').textContent = e.texte;
-    $('#barreTitre').textContent = e.app === "L'Atelier" ? "L'Atelier" : `L'Atelier — ${e.app}`;
-    $('#compte').textContent = `${n + 1} / ${ETAPES.length}`;
-    boutons[n].scrollIntoView({ inline: 'nearest', block: 'nearest' });
+  function aller(i, j) {
+    const change = i !== e || !plan.querySelector('.point');
+    e = (i + ETAPES.length) % ETAPES.length; const et = ETAPES[e];
+    if (change) {
+      plan.querySelectorAll('.point').forEach(x => x.remove());
+      et.points.forEach(([x, y, t], k) => {
+        const b = document.createElement('button');
+        b.className = 'point'; b.style.left = x + '%'; b.style.top = y + '%'; b.style.setProperty('--c', et.c);
+        b.textContent = k + 1; b.setAttribute('aria-label', t);
+        b.addEventListener('click', ev => { ev.stopPropagation(); auto(false); aller(e, k); });
+        plan.append(b);
+      });
+      imgs.forEach((im, k) => im.classList.toggle('on', k === e));
+      onglets.forEach((o, k) => o.toggleAttribute('aria-current', k === e));
+      onglets[e].scrollIntoView({ inline: 'nearest', block: 'nearest' });
+      $('#app').textContent = et.app; $('#app').style.color = et.c;
+      $('#titre').textContent = et.titre; $('#texte').textContent = et.texte;
+      $('#barreTitre').textContent = et.app === "L'Atelier" ? "L'Atelier" : `L'Atelier — ${et.app}`;
+      $('#listePoints').innerHTML = et.points.map(([, , t, d], k) =>
+        `<li><button data-k="${k}"><span class="n" style="--c:${et.c}">${k + 1}</span><span><b>${t}</b><span>${d}</span></span></button></li>`).join('');
+      $('#listePoints').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { auto(false); aller(e, +b.dataset.k); }));
+    }
+    viser(j);
+  }
+
+  // Zoom sur un point (j >= 0) ou vue d'ensemble (j = -1)
+  function viser(j) {
+    const et = ETAPES[e]; p = j;
+    const pts = [...plan.querySelectorAll('.point')];
+    pts.forEach((b, k) => b.classList.toggle('actif', k === j));
+    $('#listePoints').querySelectorAll('button').forEach((b, k) => b.toggleAttribute('aria-current', k === j));
+    if (j < 0) {
+      plan.style.transform = 'none'; plan.style.setProperty('--inv', 1);
+      pts.forEach(b => b.style.setProperty('--inv', 1));
+      bulle.classList.remove('on');
+      $('#compte').textContent = `Écran ${e + 1} / ${ETAPES.length}`;
+      return;
+    }
+    const [x, y, t, d] = et.points[j];
+    plan.style.transformOrigin = `${x}% ${y}%`;
+    plan.style.transform = `scale(${ZOOM})`;
+    pts.forEach(b => b.style.setProperty('--inv', (1 / ZOOM).toFixed(3)));
+    // La bulle se place à côté du point (qui ne bouge pas : c'est le centre du zoom)
+    $('#bulleTitre').textContent = t; $('#bulleTexte').textContent = d;
+    bulle.style.left = bulle.style.right = bulle.style.top = bulle.style.bottom = '';
+    if (x < 55) bulle.style.left = `calc(${x}% + 26px)`; else bulle.style.right = `calc(${100 - x}% + 26px)`;
+    if (y < 60) bulle.style.top = `calc(${y}% - 10px)`; else bulle.style.bottom = `calc(${100 - y}% - 10px)`;
+    bulle.classList.remove('on'); void bulle.offsetWidth; setTimeout(() => bulle.classList.add('on'), calme ? 0 : 350);
+    $('#compte').textContent = `Point ${j + 1} / ${et.points.length} · écran ${e + 1}`;
+  }
+
+  function suivant() {
+    const n = ETAPES[e].points.length;
+    if (p < n - 1) aller(e, p + 1); else aller(e + 1, -1);
+  }
+  function precedent() {
+    if (p > 0) aller(e, p - 1);
+    else if (p === 0) aller(e, -1);
+    else { const k = (e - 1 + ETAPES.length) % ETAPES.length; aller(k, ETAPES[k].points.length - 1); }
   }
   function auto(oui) {
-    clearInterval(minuteur); minuteur = oui ? setInterval(() => aller(n + 1), 9000) : null;
-    $('#auto').setAttribute('aria-pressed', oui);
+    clearInterval(minuteur); minuteur = oui ? setInterval(suivant, AUTO) : null;
+    $('#auto').setAttribute('aria-pressed', oui); $('#auto').textContent = oui ? 'Mettre en pause' : 'Lancer la visite';
+    if (oui && p < 0) suivant();
   }
-  $('#prec').addEventListener('click', () => { auto(false); aller(n - 1); });
-  $('#suiv').addEventListener('click', () => { auto(false); aller(n + 1); });
+  $('#suiv').addEventListener('click', () => { auto(false); suivant(); });
+  $('#prec').addEventListener('click', () => { auto(false); precedent(); });
+  $('#ensemble').addEventListener('click', () => { auto(false); viser(-1); });
   $('#auto').addEventListener('click', () => auto(!minuteur));
+  vue.addEventListener('click', () => { if (p >= 0) { auto(false); viser(-1); } });
   $('#grand').addEventListener('click', () => {
     const f = $('#fenetre');
-    if (document.fullscreenElement) document.exitFullscreen();
-    else if (f.requestFullscreen) f.requestFullscreen();
-    else window.open(imgs[n].src, '_blank');
+    if (document.fullscreenElement) document.exitFullscreen(); else if (f.requestFullscreen) f.requestFullscreen();
   });
-  vue.addEventListener('click', () => $('#grand').click());
-  addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') { auto(false); aller(n + 1); }
-    if (e.key === 'ArrowLeft') { auto(false); aller(n - 1); }
+  addEventListener('keydown', ev => {
+    if (ev.key === 'ArrowRight') { auto(false); suivant(); }
+    if (ev.key === 'ArrowLeft') { auto(false); precedent(); }
+    if (ev.key === 'Escape') { auto(false); viser(-1); }
   });
   let x0 = null;
-  vue.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
-  vue.addEventListener('touchend', e => {
-    if (x0 === null) return; const d = e.changedTouches[0].clientX - x0;
-    if (Math.abs(d) > 50) { auto(false); aller(n + (d < 0 ? 1 : -1)); } x0 = null;
+  vue.addEventListener('touchstart', ev => { x0 = ev.touches[0].clientX; }, { passive: true });
+  vue.addEventListener('touchend', ev => {
+    if (x0 === null) return; const d = ev.changedTouches[0].clientX - x0;
+    if (Math.abs(d) > 50) { auto(false); d < 0 ? suivant() : precedent(); } x0 = null;
   });
-  aller(0);
+  aller(0, -1);
 })();
 </script>
 </body>

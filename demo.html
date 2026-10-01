@@ -19,6 +19,14 @@
 .exemple{display:inline-flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;color:var(--texte3)}
 .exemple i{width:8px;height:8px;border-radius:50%;background:var(--vert)}
 
+/* La vidéo d'une minute */
+.film{margin:34px auto 10px;max-width:1080px}
+.film .fenetre{background:#000}
+.film video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.film .legende-film{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px;color:var(--texte3);font-size:14px}
+.sep-visite{text-align:center;margin:70px 0 0}
+.sep-visite h2{font-size:clamp(28px,3.4vw,42px)}
+
 /* Les étapes */
 .etapes{list-style:none;margin:30px 0 14px;padding:0 0 4px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;counter-reset:e}
 .etapes li{counter-increment:e;flex:1 0 auto}
@@ -115,8 +123,24 @@
     <div class="tete-demo">
       <div class="etiquette revele">Démo guidée</div>
       <h1 data-mots>L'Atelier, <span class="degrade">écran par écran</span></h1>
-      <p class="chapeau revele d2">Cliquez sur les points numérotés : l'écran s'agrandit sur ce qu'il faut regarder. Ou lancez la visite et laissez-vous guider.</p>
+      <p class="chapeau revele d2">Regardez la vidéo d'une minute, puis parcourez chaque écran : les points numérotés montrent ce qu'il faut regarder.</p>
       <div class="exemple revele d3"><i></i>Projet d'exemple : aucune donnée réelle</div>
+    </div>
+
+    <div class="film revele d3">
+      <div class="fenetre">
+        <div class="chrome"><i></i><i></i><i></i><span>L'Atelier en une minute</span></div>
+        <video controls playsinline preload="none" poster="img/video-affiche.jpg">
+          <source src="media/demo-atelier.mp4" type="video/mp4">
+          Votre navigateur ne lit pas la vidéo : <a href="media/demo-atelier.mp4">la télécharger</a>.
+        </video>
+      </div>
+      <div class="legende-film"><span>Les sept applications et la veille réglementaire, sous-titrées. Musique originale.</span><span>1 min 16</span></div>
+    </div>
+
+    <div class="sep-visite">
+      <div class="etiquette revele">Visite commentée</div>
+      <h2 data-mots>Ou visitez écran par écran</h2>
     </div>
 
     <ol class="etapes" id="etapes" aria-label="Les étapes de la démo"></ol>

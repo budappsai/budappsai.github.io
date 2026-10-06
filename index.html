@@ -176,15 +176,15 @@
      La voix dure 29,7 s ; chaque phrase a son début et sa fin mesurés
      à la fabrication. Les mots s'allument au rythme de la voix. */
   const SCENES = [
-    { d: 0.3, f: 2.13, texte: 'Bienvenue chez BudappsAI.', vue: 'logo' },
-    { d: 2.68, f: 6.59, texte: 'Ici, on crée des applications pour décider *vite, *et *juste.', vue: 'logo' },
-    { d: 7.04, f: 12.9, texte: "La première, *PROJETLIA, vous accompagne de l'idée jusqu'au pilotage de votre entreprise.", vue: 'ecran', img: 'atelier-accueil' },
-    { d: 13.35, f: 18.45, texte: 'Chiffres, droit, bâtiment, immobilier : tout se retrouve dans un *seul *dossier.', vue: 'ecran', puces: true,
+    { d: 0.3, f: 2.12, texte: 'Bienvenue chez BudappsAI.', vue: 'logo' },
+    { d: 2.67, f: 6.57, texte: 'Ici, on crée des applications pour décider *vite, *et *juste.', vue: 'logo' },
+    { d: 7.02, f: 13.22, texte: "La première, *PROJETLIA, vous accompagne de l'idée jusqu'au pilotage de votre entreprise.", vue: 'ecran', img: 'atelier-accueil' },
+    { d: 13.67, f: 18.76, texte: 'Chiffres, droit, bâtiment, immobilier : tout se retrouve dans un *seul *dossier.', vue: 'ecran', puces: true,
       suite: [[0, 'creata-accueil'], [1, 'juridia-accueil'], [2, 'btpedia-accueil'], [3, 'patrimonia-accueil']] },
-    { d: 18.9, f: 20.99, texte: "Et chaque chiffre vous montre *d'où *il *vient.", vue: 'ecran', img: 'creata-faisabilite', zoom: true },
-    { d: 21.44, f: 23.74, texte: 'Vos données, elles, restent *chez *vous.', vue: 'verrou' },
-    { d: 24.19, f: 26.06, texte: "Essayez la démo. *C'est *gratuit.", vue: 'ecran', img: 'pilotia-accueil' },
-    { d: 26.66, f: 28.74, texte: 'BudappsAI. Décidez *plus *vite.', vue: 'fin' },
+    { d: 19.21, f: 21.3, texte: "Et chaque chiffre vous montre *d'où *il *vient.", vue: 'ecran', img: 'creata-faisabilite', zoom: true },
+    { d: 21.75, f: 24.03, texte: 'Vos données, elles, restent *chez *vous.', vue: 'verrou' },
+    { d: 24.48, f: 26.35, texte: "Essayez la démo. *C'est *gratuit.", vue: 'ecran', img: 'pilotia-accueil' },
+    { d: 26.95, f: 29.02, texte: 'BudappsAI. Décidez *plus *vite.', vue: 'fin' },
   ];
   const cin = $('#cinema'), texte = $('#cinTexte'), barre = $('#cinBarre'), temps = $('#cinTemps'), flash = $('#cinFlash');
   const imgs = [...document.querySelectorAll('#cinImages img')], puces = [...document.querySelectorAll('#cinPuces span')];
@@ -223,7 +223,7 @@
         puces.forEach((p, j) => p.classList.toggle('on', !!s.suite[j] && dits > s.suite[j][0]));
       }
     }
-    const d = voix.duration || 29.1;
+    const d = voix.duration || 29.4;
     barre.style.transform = `scaleX(${borne(t / d)})`; temps.textContent = `${mmss(t)} / ${mmss(d)}`;
   }
   const tourner = () => { image(voix.currentTime); if (!voix.paused) boucle = requestAnimationFrame(tourner); };
@@ -292,7 +292,7 @@
     $('#cinSon').setAttribute('aria-label', coupe ? 'Remettre le son' : 'Couper le son'); $('#cinSon').style.opacity = coupe ? .5 : 1;
   });
   $('#cinPiste').addEventListener('click', e => {
-    const r = e.currentTarget.getBoundingClientRect(); voix.currentTime = borne((e.clientX - r.left) / r.width) * (voix.duration || 29.1);
+    const r = e.currentTarget.getBoundingClientRect(); voix.currentTime = borne((e.clientX - r.left) / r.width) * (voix.duration || 29.4);
     courante = -1; cin.classList.remove('termine'); image(voix.currentTime);
   });
   addEventListener('keydown', e => {

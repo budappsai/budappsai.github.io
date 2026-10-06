@@ -8,8 +8,7 @@ Le script remplace leur contenu. Toutes les pages, accueil compris.   python3 ou
 import os, re
 
 ICI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOGO = ('<span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" '
-        'stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span>')
+LOGO = ('<span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidden="true"><path d="M512 800V420" stroke="#fff" stroke-width="64" stroke-linecap="round"/><path d="M520 668C410 680 300 616 282 476C412 462 512 532 520 668Z"/><path d="M504 606C600 616 702 556 724 436C612 426 512 486 504 606Z"/><circle cx="512" cy="356" r="98"/></svg></span>')
 FLECHE = '<svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>'
 LIENS = [('projetlia.html', 'PROJETLIA', 'projetlia.html'), ('donnees.html', 'Vos données', 'donnees.html'),
          ('tarifs.html', 'Tarifs', 'tarifs.html'), ('demo.html', 'Démo', 'demo.html'), ('contact.html', 'Contact', 'contact.html')]

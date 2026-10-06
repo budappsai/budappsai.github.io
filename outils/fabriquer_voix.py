@@ -19,7 +19,7 @@ TAUX = 24000
 PHRASES = [                       # ce que la voix DIT (orthographe phonétique)
     "Bienvenue chez Beudapps, A. I.",
     "Ici, on crée des applications pour décider vite, et juste.",
-    "La première, L'Atelier, vous accompagne de l'idée, jusqu'au pilotage de votre entreprise.",
+    "La première, Projetlia, vous accompagne de l'idée, jusqu'au pilotage de votre entreprise.",
     "Chiffres, droit, bâtiment, immobilier : tout se retrouve dans un seul dossier.",
     "Et chaque chiffre vous montre d'où il vient.",
     "Vos données, elles, restent chez vous.",

@@ -3,14 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Télécharger L'Atelier — BudappsAI</title>
-<meta name="description" content="Télécharger L'Atelier pour Mac (Apple Silicon ou Intel) ou Windows, l'installer et le mettre à jour. L'application s'ouvre avec la licence reçue après l'abonnement.">
+<title>Télécharger PROJETLIA — BudappsAI</title>
+<meta name="description" content="Télécharger PROJETLIA pour Mac (Apple Silicon ou Intel) ou Windows, l'installer et le mettre à jour. L'application se télécharge et s'ouvre avec la licence reçue après l'abonnement ou avec un code d'accès.">
 <meta name="theme-color" content="#09090b">
 <link rel="canonical" href="https://www.budappsai.com/telecharger.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="budappsai.css">
 <style>
+.obtenir{max-width:680px;margin:44px auto 0;padding:34px}
+.obtenir h2{font-size:22px;letter-spacing:-.02em;line-height:1.2;text-align:left;margin:0 0 8px;max-width:none}
+.obtenir .intro{margin:0 0 22px}
+.obtenir .champ{margin-bottom:18px}
+.obtenir label{display:block;margin:0 0 7px;font-size:14px;font-weight:600;color:var(--texte)}
+.obtenir input,.obtenir textarea{display:block;width:100%;max-width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--bord);background:rgba(0,0,0,.25);
+  color:var(--texte);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;appearance:none}
+.obtenir textarea{min-height:120px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.5;word-break:break-all}
+.obtenir input::placeholder,.obtenir textarea::placeholder{color:var(--texte3);font-family:var(--police);font-size:15px}
+.obtenir input:focus,.obtenir textarea:focus{border-color:rgba(185,179,255,.6);box-shadow:0 0 0 4px rgba(109,93,252,.15)}
+.obtenir [aria-invalid="true"]{border-color:rgba(239,111,92,.7)}
+.obtenir .envoyer{width:100%;height:54px;font-size:16px;margin-top:4px}
+.obtenir .envoyer[disabled]{opacity:.6;cursor:progress}
+.obtenir .message{margin:14px 0 0;font-size:15px;line-height:1.5;color:var(--texte2)}
+.obtenir .message:empty{display:none}
+.obtenir .message.erreur{padding:12px 16px;border-radius:14px;color:#f3a38f;border:1px solid rgba(239,111,92,.35);background:rgba(239,111,92,.07)}
+.obtenir .message.ok{padding:12px 16px;border-radius:14px;color:var(--texte);border:1px solid rgba(126,226,176,.3);background:rgba(47,182,124,.07)}
+.obtenir .aide{margin:8px 0 0;font-size:14px;color:var(--texte3)}
+.obtenir .sans-licence{margin:16px 0 0;font-size:14.5px;color:var(--texte2)}
+.obtenir .sans-licence a{color:var(--lilas);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.obtenir{padding:24px}}
 .paquets{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.paquets[hidden],.paquet[hidden]{display:none}
 .paquet{display:flex;flex-direction:column;align-items:flex-start}
 .paquet .os{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--fond3);border:1px solid var(--bord)}
 .paquet .os svg{width:26px;height:26px}
@@ -40,74 +62,92 @@
 <header class="tete">
   <div class="enveloppe barre">
     <a class="marque" href="./" aria-label="BudappsAI, accueil"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
-    <nav class="liens" aria-label="Navigation principale"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a></nav>
+    <nav class="liens" aria-label="Navigation principale"><a href="projetlia.html">PROJETLIA</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a></nav>
     <div class="boutons-tete"><a class="btn demo" href="demo.html">Voir la démo</a><a class="btn btn-lumiere aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
     <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-<div class="menu-mobile"><a href="atelier.html">L'Atelier</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
+<div class="menu-mobile"><a href="projetlia.html">PROJETLIA</a><a href="donnees.html">Vos données</a><a href="tarifs.html">Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
 <!--/TETE-->
 
 <main id="contenu">
   <div class="enveloppe page-tete">
     <div class="etiquette revele">Télécharger</div>
-    <h1 data-mots>Installer <span class="degrade">L'Atelier</span></h1>
-    <p class="chapeau revele d3">Choisissez le fichier de votre ordinateur, installez, puis collez la licence reçue par courriel.</p>
-    <div class="version revele d4">Version <b>1.26.0</b> · publiée le 30 septembre 2026</div>
+    <h1 data-mots>Installer <span class="degrade">PROJETLIA</span></h1>
+    <p class="chapeau revele d3">Indiquez votre courriel et votre licence pour obtenir le fichier adapté à votre ordinateur. Installez-le, puis collez la même licence dans PROJETLIA.</p>
+    <div class="version revele d4">Version <b>1.28.0</b> · publiée le 6 octobre 2026</div>
   </div>
 
   <section style="padding-top:0">
     <div class="enveloppe">
-      <div class="paquets">
+      <form class="carte obtenir revele" id="obtenir" novalidate>
+        <h2>Obtenir vos liens de téléchargement</h2>
+        <p class="intro">Le serveur de BudappsAI vérifie que la licence correspond bien à cette adresse, puis fournit les liens, valables une heure. Rien n'est conservé.</p>
+        <div class="champ">
+          <label for="courriel">Courriel du compte</label>
+          <input id="courriel" name="courriel" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false">
+        </div>
+        <div class="champ">
+          <label for="licence">Licence ou code d'accès</label>
+          <textarea id="licence" name="licence" rows="4" autocomplete="off" autocapitalize="off" spellcheck="false" required aria-describedby="aide-licence" placeholder="Licence reçue par courriel (ATL1.…) ou code d’accès"></textarea>
+          <p class="aide" id="aide-licence">Vous avez reçu un code d'accès ? Saisissez-le à la place de la licence.</p>
+        </div>
+        <button class="btn btn-lumiere envoyer" type="submit" id="obtenir-bouton">Obtenir mes liens <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        <p class="message" id="message" role="status" aria-live="polite"></p>
+        <p class="sans-licence"><a href="tarifs.html">Vous n'avez pas encore de licence&nbsp;? Voir les tarifs</a></p>
+      </form>
+
+      <div class="paquets" id="paquets" hidden>
         <div class="carte paquet revele" id="p-arm">
           <span class="pastille-c">Pour votre ordinateur</span>
           <span class="os"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.4-.9-2.4-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg></span>
           <h3>Mac à puce Apple</h3>
-          <div class="poids">M1, M2, M3, M4… · DMG · 33 Mo</div>
+          <div class="poids">M1, M2, M3, M4… · PROJETLIA-macOS-AppleSilicon.dmg · 33 Mo</div>
           <p>Le Mac le plus courant depuis 2021. Pour vérifier : menu Pomme › À propos de ce Mac, ligne « Puce ».</p>
-          <a class="btn btn-lumiere" href="https://github.com/budappsai/telechargements/releases/latest/download/ATELIER-macOS-AppleSilicon.dmg">Télécharger pour Mac Apple</a>
+          <a class="btn btn-lumiere" id="lien-mac_arm" href="#">Télécharger pour Mac Apple</a>
         </div>
         <div class="carte paquet revele d1" id="p-intel">
           <span class="pastille-c">Pour votre ordinateur</span>
           <span class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
           <h3>Mac à processeur Intel</h3>
-          <div class="poids">Mac de 2020 et avant · DMG · 31 Mo</div>
+          <div class="poids">Mac de 2020 et avant · PROJETLIA-macOS-Intel.dmg · 31 Mo</div>
           <p>Si « À propos de ce Mac » indique « Processeur … Intel ».</p>
-          <a class="btn" href="https://github.com/budappsai/telechargements/releases/latest/download/ATELIER-macOS-Intel.dmg">Télécharger pour Mac Intel</a>
+          <a class="btn" id="lien-mac_intel" href="#">Télécharger pour Mac Intel</a>
         </div>
         <div class="carte paquet revele d2" id="p-win">
           <span class="pastille-c">Pour votre ordinateur</span>
           <span class="os"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.5v7H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg></span>
           <h3>Windows</h3>
-          <div class="poids">Windows 10 et 11 · ZIP · 33 Mo</div>
-          <p>Un dossier prêt à l'emploi, sans installateur : on le décompresse et on lance L'Atelier.</p>
-          <a class="btn" href="https://github.com/budappsai/telechargements/releases/latest/download/ATELIER-Windows.zip">Télécharger pour Windows</a>
+          <div class="poids">Windows 10 et 11 · PROJETLIA-Windows.zip · 33 Mo</div>
+          <p>Un dossier prêt à l'emploi, sans programme d'installation : il suffit de le décompresser et de lancer PROJETLIA.</p>
+          <a class="btn" id="lien-windows" href="#">Télécharger pour Windows</a>
         </div>
       </div>
 
-      <p class="licence revele"><strong>Une licence est nécessaire.</strong> Elle vous est envoyée par courriel après l'abonnement (voir les <a href="tarifs.html" style="text-decoration:underline">tarifs</a>). Sans licence, L'Atelier s'installe mais ne s'ouvre pas : pour découvrir avant d'acheter, parcourez la <a href="demo.html" style="text-decoration:underline">démo guidée</a>.</p>
+      <p class="licence revele"><strong>Une licence, ou un code d'accès, est nécessaire</strong> pour télécharger comme pour ouvrir PROJETLIA. La licence vous est envoyée par courriel après l'abonnement (voir les <a href="tarifs.html" style="text-decoration:underline">tarifs</a>). Pour découvrir le logiciel avant de l'acheter, parcourez la <a href="demo.html" style="text-decoration:underline">démo guidée</a>.</p>
 
       <div class="marche">
         <div class="carte revele">
           <h3>Sur Mac</h3>
           <ol>
-            <li>Ouvrez le fichier téléchargé, puis <strong>glissez L'Atelier sur le dossier Applications</strong>.</li>
-            <li>Lancez-le depuis Applications. La première fois, si macOS refuse de l'ouvrir : <strong>Réglages Système › Confidentialité et sécurité</strong>, puis « Ouvrir quand même ».</li>
-            <li>Collez votre licence : c'est prêt.</li>
-            <li><strong>Mise à jour</strong> : L'Atelier vous prévient au démarrage. Fermez sa fenêtre, téléchargez, et glissez par-dessus en acceptant de remplacer. Vos dossiers ne bougent pas.</li>
+            <li>Ouvrez le fichier téléchargé, puis <strong>glissez PROJETLIA sur le dossier Applications</strong>.</li>
+            <li>Lancez-le depuis Applications. Si macOS refuse de l'ouvrir la première fois : <strong>Réglages Système › Confidentialité et sécurité</strong>, puis « Ouvrir quand même ».</li>
+            <li>Collez votre licence ou votre code d'accès : PROJETLIA est prêt.</li>
+            <li><strong>Mise à jour</strong> : PROJETLIA vous prévient au démarrage. Fermez sa fenêtre, téléchargez la nouvelle version et glissez-la sur l'ancienne en acceptant de la remplacer. Vos dossiers sont conservés.</li>
           </ol>
         </div>
         <div class="carte revele d1">
           <h3>Sur Windows</h3>
           <ol>
             <li>Faites un clic droit sur le fichier téléchargé › <strong>Extraire tout</strong>.</li>
-            <li>Ouvrez le dossier ATELIER et lancez <strong>ATELIER.exe</strong>. Si Windows affiche « Windows a protégé votre ordinateur » : « Informations complémentaires », puis « Exécuter quand même ».</li>
-            <li>Collez votre licence : c'est prêt.</li>
-            <li><strong>Mise à jour</strong> : L'Atelier vous prévient au démarrage. Fermez-le, téléchargez, et remplacez l'ancien dossier par le nouveau. Vos dossiers ne bougent pas.</li>
+            <li>Ouvrez le dossier PROJETLIA et lancez <strong>PROJETLIA.exe</strong>. Si Windows affiche « Windows a protégé votre ordinateur » : « Informations complémentaires », puis « Exécuter quand même ».</li>
+            <li>Collez votre licence ou votre code d'accès : PROJETLIA est prêt.</li>
+            <li><strong>Mise à jour</strong> : PROJETLIA vous prévient au démarrage. Fermez-le, téléchargez la nouvelle version et remplacez l'ancien dossier par le nouveau. Vos dossiers sont conservés.</li>
           </ol>
         </div>
       </div>
-      <p class="note revele">Les fichiers sont hébergés sur GitHub, dans le dépôt public de BudappsAI, qui ne contient aucun code source. En téléchargeant, vous acceptez les <a href="cgv.html" style="text-decoration:underline">conditions générales</a>.</p>
+      <p class="note revele">Avant la version 1.28.0, PROJETLIA s'appelait ATELIER : si l'ancienne application est encore installée, vous pouvez la supprimer ; vos dossiers sont conservés.</p>
+      <p class="note revele">Les fichiers sont fournis par le serveur de BudappsAI, hébergé par Cloudflare, sans lien public : chaque lien reste valable une heure. En téléchargeant, vous acceptez les <a href="cgv.html" style="text-decoration:underline">conditions générales</a>.</p>
     </div>
   </section>
 </main>
@@ -118,17 +158,87 @@
     <div class="colonnes">
       <div><a class="marque" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.6l3.8 3.8L17.6 8"/><circle cx="18.2" cy="17.2" r="1.5" fill="#fff" stroke="none"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
-      <div><h4>Applications</h4><ul><li><a href="atelier.html">L'Atelier</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="telecharger.html">Télécharger</a></li></ul></div>
+      <div><h4>Applications</h4><ul><li><a href="projetlia.html">PROJETLIA</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="telecharger.html">Télécharger</a></li></ul></div>
       <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
-      <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
+      <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="droits-auteur.html">Droits d'auteur</a></li></ul></div>
     </div>
     <div class="geant" aria-hidden="true">budappsai</div>
-    <div class="bas"><span>© <span data-annee>2026</span> BudappsAI</span><span>Aucun cookie, aucun traceur.</span></div>
+    <div class="bas"><span>© <span data-annee>2026</span> BudappsAI. Tous droits réservés.</span><span>Aucun cookie, aucun traceur.</span></div>
   </div>
 </footer>
 <!--/PIED-->
 <script src="budappsai.js"></script>
 <script>
+const ACTIVATION = 'https://atelier-activation.activation-worker.workers.dev'; // serveur d'activation de BudappsAI
+
+// Les liens ne sont pas publics : le serveur d'activation vérifie que la
+// licence appartient bien à ce courriel (ou que le code d'accès est valable),
+// puis renvoie des liens valables une heure. Rien n'est gardé, ni ici ni chez lui.
+(() => {
+  const form = document.getElementById('obtenir'), bouton = document.getElementById('obtenir-bouton');
+  const champCourriel = document.getElementById('courriel'), champLicence = document.getElementById('licence');
+  const message = document.getElementById('message'), paquets = document.getElementById('paquets');
+  const SANS_REPONSE = 'Le serveur de téléchargement ne répond pas. Réessayez dans un instant ou écrivez à contact@budappsai.com.';
+  const LIENS = { mac_arm: 'p-arm', mac_intel: 'p-intel', windows: 'p-win' };
+
+  const dire = (texte, genre) => { message.className = 'message' + (genre ? ' ' + genre : ''); message.textContent = texte; };
+  const marquer = (champ, faux) => champ.setAttribute('aria-invalid', faux ? 'true' : 'false');
+  const sur = u => { try { return new URL(u).protocol === 'https:'; } catch (e) { return false; } };
+  const heure = exp => {
+    const d = typeof exp === 'number' ? new Date(exp < 1e12 ? exp * 1000 : exp) : new Date(exp);
+    return exp && !isNaN(d) ? d.getHours() + ' h ' + String(d.getMinutes()).padStart(2, '0') : '';
+  };
+
+  form.addEventListener('submit', async ev => {
+    ev.preventDefault();
+    const courriel = champCourriel.value.trim();
+    // Un logiciel de messagerie coupe parfois la licence en plusieurs lignes.
+    const licence = champLicence.value.replace(/\s+/g, '');
+    // Une licence commence toujours par ATL1 ; sinon, c'est un code d'accès,
+    // et le courriel devient facultatif.
+    const estLicence = licence.startsWith('ATL1'), code = champLicence.value.trim();
+    const licenceVide = !licence;
+    const courrielFaux = estLicence && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(courriel);
+    marquer(champLicence, licenceVide); marquer(champCourriel, courrielFaux);
+    if (licenceVide) { dire("Collez la licence reçue par courriel (elle commence par ATL1.) ou saisissez votre code d'accès.", 'erreur'); champLicence.focus(); return; }
+    if (courrielFaux) { dire('Indiquez le courriel de votre compte, celui qui a reçu la licence.', 'erreur'); champCourriel.focus(); return; }
+
+    bouton.disabled = true; form.setAttribute('aria-busy', 'true');
+    dire(estLicence ? 'Vérification de la licence…' : "Vérification du code d'accès…");
+    const arret = new AbortController(), minuterie = setTimeout(() => arret.abort(), 20000);
+    let r, d = null;
+    try {
+      r = await fetch(ACTIVATION + '/telecharger', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(estLicence ? { licence, courriel } : { code }), signal: arret.signal, cache: 'no-store'
+      });
+      try { d = await r.json(); } catch (e) { d = null; }
+    } catch (e) {
+      dire(SANS_REPONSE, 'erreur'); return;
+    } finally {
+      clearTimeout(minuterie); bouton.disabled = false; form.removeAttribute('aria-busy');
+    }
+
+    const liens = r.ok && d && d.liens;
+    if (!liens) {
+      dire((d && typeof d.erreur === 'string' && d.erreur) || SANS_REPONSE, 'erreur');
+      paquets.hidden = true; return;
+    }
+    let premier = null;
+    Object.entries(LIENS).forEach(([cle, id]) => {
+      const carte = document.getElementById(id), a = document.getElementById('lien-' + cle), ok = sur(liens[cle]);
+      carte.hidden = !ok; carte.classList.add('vue');
+      a.href = ok ? liens[cle] : '#';
+      if (ok && (!premier || carte.classList.contains('conseille'))) premier = a;
+    });
+    if (!premier) { dire(SANS_REPONSE, 'erreur'); paquets.hidden = true; return; }
+    const h = heure(d.exp);
+    dire('Vos liens sont prêts' + (d.version ? ' (version ' + d.version + ')' : '') + '. Ils restent valables ' + (h ? 'jusqu\'à ' + h : 'une heure') + '.', 'ok');
+    paquets.hidden = false;
+    premier.focus();
+  });
+})();
+
 // On met en avant le fichier de cet ordinateur. Le navigateur ne dit pas
 // toujours si un Mac est Apple ou Intel : dans le doute, on ne conseille rien.
 (async () => {

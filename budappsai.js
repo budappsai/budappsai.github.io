@@ -130,7 +130,7 @@
   document.querySelectorAll('[data-compte]').forEach(el => io.observe(el));
 })();
 
-// Un lien vers une section (« atelier.html#international ») : le navigateur
+// Un lien vers une section (« projetlia.html#international ») : le navigateur
 // saute avant que la page ait pris sa hauteur (zoom collant, images), et la
 // section n'est jamais atteinte. On y va une fois la page posee.
 addEventListener('load', () => {

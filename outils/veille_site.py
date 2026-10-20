@@ -23,8 +23,9 @@ APPLIS = [
     ('JURIDIA', 'JURIDIA', 'juridia', "Seuils d'effectif, obligations sociales, assurances, ERP"),
     ('FONCIERA', 'PATRIMONIA', 'patrimonia', "Régimes locatifs, plus-values, frais d'acquisition, crédit"),
     ('ENERGIA', 'ENERGIA', 'energia', "Tarifs de l'électricité, RTAA DOM, décret tertiaire, aides"),
+    ('BTPEDIA', 'BTPEDIA', 'btpedia', "TVA des travaux, RE2020, RTAA DOM, DTU, assurances construction"),
     ('FOREVER8', 'Forever 8', 'pilotia', "Calendrier fiscal, mentions obligatoires des factures"),
-    ('ATELIER', 'Commun', 'btpedia', "SMIC, taux d'emprunt, index BT, prix de l'énergie, facture électronique"),
+    ('ATELIER', 'Commun', 'encyclo', "SMIC, taux d'emprunt, index BT, prix de l'énergie, facture électronique"),
 ]
 
 

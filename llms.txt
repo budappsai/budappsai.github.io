@@ -1,6 +1,6 @@
 # BudappsAI — PROJETLIA
 
-> PROJETLIA est un logiciel de bureau (macOS, Windows) édité par BudappsAI : sept applications reliées par un même dossier client — CREATA (business plan, financement, faisabilité), JURIDIA (obligations juridiques), BTPEDIA et ENCYCLOPEDIA (plans, coupes, 3D, métré du bâtiment), ENERGIA (consommation énergétique), PATRIMONIA (patrimoine immobilier locatif), PILOTIA (réel face au prévisionnel). Interface en sept langues ; règles de six pays pour CREATA. Les données restent sur l'ordinateur de l'utilisateur.
+> PROJETLIA est un logiciel de bureau (macOS, Windows) édité par BudappsAI : sept applications reliées par un même dossier client — CREATA (business plan, financement, faisabilité), JURIDIA (obligations juridiques), BTPEDIA et ENCYCLOPEDIA (plans, coupes, 3D, métré du bâtiment), ENERGIA (consommation énergétique), PATRIMONIA (patrimoine immobilier locatif), Forever 8 (suivi de l'entreprise au quotidien : affaires, clients réguliers, trésorerie, réel face au prévisionnel). Interface en sept langues ; règles de six pays pour CREATA. Les données restent sur l'ordinateur de l'utilisateur.
 
 ## Pages
 - [PROJETLIA](https://www.budappsai.com/projetlia.html)

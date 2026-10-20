@@ -4,14 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tarifs de PROJETLIA — BudappsAI</title>
-<meta name="description" content="Standard 50 € par mois, Pro 250 € par mois, Structures dès 165 € par poste. Sans engagement.">
+<meta name="description" content="Standard 50 € par mois, Pro 250 € par mois, Structures dès 165 € par poste, Forever 8 25 € par mois. Sans engagement, ou moins cher avec engagement.">
 <meta name="theme-color" content="#09090b">
 <link rel="canonical" href="https://www.budappsai.com/tarifs.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Tarifs de PROJETLIA — BudappsAI">
-<meta property="og:description" content="Standard 50 € par mois, Pro 250 € par mois, Structures dès 165 € par poste. Sans engagement.">
+<meta property="og:description" content="Standard 50 € par mois, Pro 250 € par mois, Structures dès 165 € par poste, Forever 8 25 € par mois. Sans engagement, ou moins cher avec engagement.">
 <meta property="og:image" content="https://www.budappsai.com/img/partage.jpg">
 <link rel="stylesheet" href="budappsai.css">
+<style>
+.tarifs.p4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1100px){.tarifs.p4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.tarifs.p4{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="lecteur-seul" href="#contenu">Aller au contenu</a>
@@ -20,47 +25,107 @@
 <header class="tete">
   <div class="enveloppe barre">
     <a class="marque" href="./" aria-label="BudappsAI, accueil"><span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidden="true"><path d="M512 800V420" stroke="#fff" stroke-width="64" stroke-linecap="round"/><path d="M520 668C410 680 300 616 282 476C412 462 512 532 520 668Z"/><path d="M504 606C600 616 702 556 724 436C612 426 512 486 504 606Z"/><circle cx="512" cy="356" r="98"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
-    <nav class="liens" aria-label="Navigation principale"><a href="projetlia.html">PROJETLIA</a><a href="donnees.html">Vos données</a><a href="tarifs.html" aria-current=page>Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a></nav>
-    <div class="boutons-tete"><a class="btn demo" href="demo.html">Voir la démo</a><a class="btn btn-lumiere aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+    <nav class="liens" aria-label="Navigation principale"><a href="projetlia.html">PROJETLIA</a><a href="donnees.html">Vos données</a><a href="tarifs.html" aria-current=page>Tarifs</a><a href="demo.html">Présentation appli</a><a href="contact.html">Contact</a></nav>
+    <div class="boutons-tete"><a class="btn demo" href="demo.html">Présentation appli</a><a class="btn btn-lumiere aimant" href="tarifs.html">Passer à l'abonnement <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
     <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-<div class="menu-mobile"><a href="projetlia.html">PROJETLIA</a><a href="donnees.html">Vos données</a><a href="tarifs.html" aria-current=page>Tarifs</a><a href="demo.html">Démo</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Voir la démo</a></div>
+<div class="menu-mobile"><a href="projetlia.html">PROJETLIA</a><a href="donnees.html">Vos données</a><a href="tarifs.html" aria-current=page>Tarifs</a><a href="demo.html">Présentation appli</a><a href="contact.html">Contact</a><a class="btn btn-lumiere" href="tarifs.html">Passer à l'abonnement</a><a class="btn" href="demo.html">Présentation appli</a></div>
 <!--/TETE-->
 
 <main id="contenu">
   <div class="enveloppe page-tete">
     <div class="etiquette revele">Tarifs</div>
-    <h1 data-mots>Deux formules, <span class="degrade">sans engagement</span></h1>
-    <p class="chapeau revele d3">Standard pour mener votre propre projet, Pro pour accompagner ceux de vos clients. Prix par poste et par mois.</p>
+    <h1 data-mots>Nos formules, <span class="degrade">avec ou sans engagement</span></h1>
+    <p class="chapeau revele d3">Standard pour mener votre propre projet, Pro pour accompagner ceux de vos clients, Forever 8 pour le porteur qui suit sa propre entreprise. Prix par poste et par mois.</p>
   </div>
   <section style="padding-top:10px">
     <div class="enveloppe">
-      <div class="tarifs">
+      <div class="tarifs p4">
         <div class="carte tarif revele">
           <div class="nom">Standard</div>
           <div class="prix">50 € <small>/ mois</small></div>
           <ul><li>Business plan, financement, trésorerie</li><li>Patrimoine immobilier, énergie du bâtiment</li><li>Plans et métrés jusqu'à 75 m²</li><li>5 nouveaux dossiers par mois</li><li>Un poste</li></ul>
           <a class="btn" href="contact.html?sujet=standard">Choisir Standard</a>
         </div>
-        <div class="carte tarif pro revele d1">
+        <div class="carte tarif revele d1">
+          <div class="nom">Forever 8</div>
+          <div class="prix">25 € <small>/ mois</small></div>
+          <ul><li>Pour le porteur qui suit son entreprise</li><li>Affaires, clients réguliers, trésorerie mois par mois</li><li>Factures et échéances fiscales et sociales</li><li>En option : le réel face au prévisionnel CREATA</li><li>Un poste, abonnement à part</li></ul>
+          <a class="btn" href="contact.html?sujet=forever8">Choisir Forever 8</a>
+        </div>
+        <div class="carte tarif pro revele d2">
           <span class="statut">Le plus complet</span>
           <div class="nom">Pro</div>
           <div class="prix">250 € <small>/ mois</small></div>
           <ul><li>Tout le contenu de Standard, sans limite</li><li>Diagnostic du porteur et suivi de parcours</li><li>Optimisation fiscale et simulateurs</li><li>JURIDIA et Forever 8</li><li>Dossiers à vos couleurs</li></ul>
           <a class="btn btn-lumiere" href="contact.html?sujet=pro">Choisir Pro</a>
         </div>
-        <div class="carte tarif revele d2">
+        <div class="carte tarif revele d3">
           <div class="nom">Structures</div>
           <div class="prix">dès 165 € <small>/ poste / mois</small></div>
           <ul><li>La formule Pro de 2 à 30 postes</li><li>200 € de 2 à 3 postes, 180 € de 4 à 10, 165 € de 11 à 30</li><li>Plusieurs conseillers, chacun sous son nom</li><li>Au-delà de 30 postes : sur devis</li></ul>
           <a class="btn" href="contact.html?sujet=structures">Nous écrire</a>
         </div>
       </div>
-      <p class="note revele">Prix nets, TVA non applicable (article 294 du CGI). Facturation mensuelle, abonnement résiliable à tout moment. Droit de rétractation de 30 jours : voir les <a href="cgv.html" style="text-decoration:underline">conditions générales</a>. La démo se parcourt gratuitement en ligne ; l'application s'installe après l'abonnement.</p>
+      <p class="note revele">Prix nets, TVA non applicable (article 294 du CGI). Sans engagement : facturation mensuelle, résiliable à tout moment. Avec engagement : paiement annuel d'avance. Droit de rétractation de 30 jours : voir les <a href="cgv.html" style="text-decoration:underline">conditions générales</a>. La démo se parcourt gratuitement en ligne ; l'application s'installe après l'abonnement.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <h2 data-mots>Payer moins en s'engageant</h2>
+      <p class="chapeau revele">Même règle pour toutes les formules et tous les nombres de postes. Sans engagement : paiement mensuel, résiliable à tout moment. Engagement 1 an : 2 mois offerts, soit 10 mois payés, paiement annuel d'avance. Engagement 3 ans : 10 % de moins chaque année que l'engagement 1 an, prix garanti 3 ans, paiement annuel d'avance.</p>
+      <div class="revele" style="overflow-x:auto;margin-top:40px">
+        <table class="tableau">
+          <thead>
+            <tr><th>Formule</th><th>Sans engagement (12 mois)</th><th>Engagement 1 an</th><th>Engagement 3 ans, par an</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Standard</td><td>600 €</td><td>500 €</td><td>450 €</td></tr>
+            <tr><td>Forever 8</td><td>300 €</td><td>250 €</td><td>225 €</td></tr>
+            <tr><td>Pro, 1 poste</td><td>3 000 €</td><td>2 500 €</td><td>2 250 €</td></tr>
+            <tr><td>Pro, 10 postes</td><td>21 600 €</td><td>18 000 €</td><td>16 200 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note revele">Montants en euros par an, TVA non applicable. Pro à 10 postes : tarif Structures, 180 € par poste et par mois.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <h2 data-mots>Services</h2>
+      <div class="portes p4">
+        <div class="carte porte revele" data-incline style="--c:rgba(47,182,124,.6)">
+          <span class="ic" style="background:linear-gradient(135deg,#2fb67c,#12948a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg></span>
+          <h3>Installation</h3><p>Sans frais. L'application se télécharge depuis le site et s'installe en quelques minutes ; la licence s'active en ligne. Aucune intervention chez le client.</p>
+        </div>
+        <div class="carte porte revele d1" data-incline style="--c:rgba(109,93,252,.6)">
+          <span class="ic" style="background:linear-gradient(135deg,var(--violet),var(--corail))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-5 9 5-9 5-9-5zM7 11v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/></svg></span>
+          <h3>Formation à l'utilisation</h3><p>De 450 à 1 000 € par jour, sur place ou à distance.</p>
+          <a class="aller" href="contact.html?sujet=formation">Nous écrire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="carte porte revele d2" data-incline style="--c:rgba(232,196,106,.6)">
+          <span class="ic" style="background:linear-gradient(135deg,#e8c46a,#ef6f5c)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+          <h3>Conseil en BTP et en finance d'entreprise</h3><p>Sur devis, accompagnement sur mesure de vos projets.</p>
+          <a class="aller" href="contact.html?sujet=conseil">Nous écrire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="carte porte revele d3" data-incline style="--c:rgba(239,111,92,.6)">
+          <span class="ic" style="background:linear-gradient(135deg,var(--corail),var(--violet))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span>
+          <h3>Veille réglementaire et financière</h3><p>50 € par mois, pour toute l'application et tous les pays, sans limite. Un bulletin mensuel des changements (aides, exonérations, crédits, taux) avec leurs sources officielles, et une alerte dès qu'un changement important est publié. Les calculs du logiciel restent mis à jour pour tous les abonnés sans supplément ; la veille est un service d'information en plus.</p>
+          <a class="aller" href="contact.html?sujet=veille">Nous écrire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
       <div class="faq">
         <h2 data-mots>Questions fréquentes</h2>
         <details><summary>Puis-je essayer avant de m'abonner ?</summary><p>Oui. La <a href="demo.html">démo guidée</a> se parcourt gratuitement en ligne, sur un projet d'exemple. L'application s'installe après l'abonnement.</p></details>
+        <details><summary>Je suis porteur de projet, laquelle choisir ?</summary><p>Forever 8, à 25 € par mois, pour suivre son entreprise : affaires, clients réguliers, trésorerie mois par mois, factures et échéances fiscales et sociales. Standard si vous voulez aussi monter le business plan.</p></details>
         <details><summary>Comment s'abonner ?</summary><p>Choisissez votre formule et écrivez-nous depuis la page <a href="contact.html">Contact</a>. Vous recevez un lien de paiement, puis votre licence par courriel. Le paiement en ligne direct arrive bientôt.</p></details>
         <details><summary>Où télécharger l'application ?</summary><p>Le lien de téléchargement vous est envoyé par courriel avec votre licence, après l'abonnement, pour Mac (puce Apple ou Intel) et Windows.</p></details>
         <details><summary>Où sont mes dossiers ?</summary><p>Sur votre ordinateur, jamais chez nous. Le détail figure sur la page <a href="donnees.html">Vos données</a>.</p></details>
@@ -89,7 +154,7 @@
     <div class="colonnes">
       <div><a class="marque" href="./"><span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidden="true"><path d="M512 800V420" stroke="#fff" stroke-width="64" stroke-linecap="round"/><path d="M520 668C410 680 300 616 282 476C412 462 512 532 520 668Z"/><path d="M504 606C600 616 702 556 724 436C612 426 512 486 504 606Z"/><circle cx="512" cy="356" r="98"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
-      <div><h4>Applications</h4><ul><li><a href="projetlia.html">PROJETLIA</a></li><li><a href="demo.html">Démo guidée</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
+      <div><h4>Applications</h4><ul><li><a href="projetlia.html">PROJETLIA</a></li><li><a href="demo.html">Présentation appli</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
       <div><h4>BudappsAI</h4><ul><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
       <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="droits-auteur.html">Droits d'auteur</a></li></ul></div>
     </div>

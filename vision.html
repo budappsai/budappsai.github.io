@@ -9,41 +9,6 @@
 <link rel="canonical" href="https://www.budappsai.com/vision.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="budappsai.css">
-<style>
-.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;padding:80px 0 120px;align-items:start}
-.contact h1{font-size:clamp(44px,6.5vw,84px);letter-spacing:-.055em;line-height:.98;margin:14px 0 18px}
-.contact .etiquette{text-align:left}
-.intro{color:var(--texte2);font-weight:300;font-size:18px;max-width:460px}
-.coord{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:12px}
-.coord a,.coord div{display:flex;gap:16px;align-items:center;padding:16px 18px;border-radius:16px;border:1px solid var(--bord);background:var(--carte);transition:border-color .25s,background .25s}
-.coord a:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.05)}
-.coord .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;background:linear-gradient(135deg,rgba(109,93,252,.3),rgba(239,111,92,.2));border:1px solid rgba(185,179,255,.25)}
-.coord svg{width:20px;height:20px;color:var(--lilas)}
-.coord small{display:block;color:var(--texte3);font-size:13px}
-.coord span{font-weight:500}
-form{padding:34px}
-.champ{position:relative;margin-bottom:18px}
-.champ input,.champ textarea,.champ select{width:100%;padding:24px 16px 10px;border-radius:14px;border:1px solid var(--bord);background:rgba(0,0,0,.25);
-  color:var(--texte);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;appearance:none}
-.champ textarea{min-height:150px;resize:vertical}
-.champ select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a6a3af' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
-.champ select option{background:#16161c}
-.champ label{position:absolute;left:17px;top:17px;color:var(--texte3);pointer-events:none;transition:all .2s var(--ressort);font-size:16px}
-.champ input:focus,.champ textarea:focus,.champ select:focus{border-color:rgba(185,179,255,.6);box-shadow:0 0 0 4px rgba(109,93,252,.15)}
-.champ input:focus+label,.champ input:not(:placeholder-shown)+label,.champ textarea:focus+label,.champ textarea:not(:placeholder-shown)+label,.champ select+label{top:7px;font-size:12px;color:var(--lilas)}
-.deux{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.envoyer{width:100%;height:54px;font-size:16px;margin-top:6px}
-.precision{color:var(--texte3);font-size:13.5px;margin:16px 0 0;line-height:1.55}
-.erreur{color:#f3a38f;font-size:14px;margin:10px 0 0;min-height:1em}
-.merci{display:none;text-align:center;padding:40px 10px}
-.merci svg{width:64px;height:64px;color:#7ee2b0}
-.merci svg path{stroke-dasharray:30;stroke-dashoffset:30;animation:trace .8s var(--ressort) .2s forwards}
-@keyframes trace{to{stroke-dashoffset:0}}
-form.fait .formulaire{display:none}
-form.fait .merci{display:block}
-@media (max-width:900px){.contact{grid-template-columns:1fr;gap:40px;padding-top:56px}.deux{grid-template-columns:1fr}form{padding:24px}}
-</style>
 </head>
 <body>
 <div class="ciel" aria-hidden="true"><div class="faisceau f1"></div><div class="faisceau f2"></div><div class="faisceau f3"></div><div class="points"></div><div class="grain"></div></div>
@@ -59,11 +24,11 @@ form.fait .merci{display:block}
 <!--/TETE-->
 
 <main id="contenu">
-  <div class="enveloppe" style="text-align:center;padding-top:72px">
+  <div class="enveloppe page-tete">
     <h1 data-mots>Tendre la main <span class="degrade">aux entreprises</span></h1>
     <p class="chapeau revele d2">Les petites et moyennes entreprises ont besoin de bons logiciels. Elles n'en ont pas toujours les moyens.</p>
   </div>
-  <section><div class="enveloppe"><div class="portes p4"><div class="carte porte revele" data-incline style="--c:rgba(109,93,252,.6)"><h3>Un prix accessible</h3><p>Des logiciels professionnels à un prix qu'une petite entreprise peut payer.</p></div><div class="carte porte revele" data-incline style="--c:rgba(47,182,124,.6)"><h3>Monter en compétence</h3><p>Chaque chiffre montre sa source et son calcul. On décide et on apprend en même temps.</p></div><div class="carte porte revele" data-incline style="--c:rgba(232,196,106,.6)"><h3>Guyane, Antilles, France</h3><p>Des entrepreneurs guyanais et antillais d'abord et ceux de France avec eux.</p></div><div class="carte porte revele" data-incline style="--c:rgba(239,111,92,.6)"><h3>Vos données chez vous</h3><p>Vos dossiers restent sur votre ordinateur. Nous n'y avons aucun accès.</p></div></div></div></section>
+  <section><div class="enveloppe"><div class="portes p4"><div class="carte porte revele" data-incline style="--c:rgba(217,103,63,.6)"><h3>Un prix accessible</h3><p>Des logiciels professionnels à un prix qu'une petite entreprise peut payer.</p></div><div class="carte porte revele" data-incline style="--c:rgba(47,182,124,.6)"><h3>Monter en compétence</h3><p>Chaque chiffre montre sa source et son calcul. On décide et on apprend en même temps.</p></div><div class="carte porte revele" data-incline style="--c:rgba(232,196,106,.6)"><h3>Guyane, Antilles, France</h3><p>Des entrepreneurs guyanais et antillais d'abord et ceux de France avec eux.</p></div><div class="carte porte revele" data-incline style="--c:rgba(239,111,92,.6)"><h3>Vos données chez vous</h3><p>Vos dossiers restent sur votre ordinateur. Nous n'y avons aucun accès.</p></div></div></div></section>
 </main>
 
 <!--PIED-->

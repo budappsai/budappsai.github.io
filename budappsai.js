@@ -42,26 +42,6 @@
   }), { threshold: .14, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.revele,.mots').forEach(el => io.observe(el));
 
-  // Projecteur des cartes (et légère inclinaison)
-  document.querySelectorAll('.carte').forEach(c => {
-    c.addEventListener('pointermove', e => {
-      const r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
-      c.style.setProperty('--mx', x + 'px'); c.style.setProperty('--my', y + 'px');
-      if (!calme && !tactile && c.dataset.incline !== undefined)
-        c.style.transform = `perspective(900px) rotateX(${(.5 - y / r.height) * 6}deg) rotateY(${(x / r.width - .5) * 6}deg) translateY(-4px)`;
-    });
-    c.addEventListener('pointerleave', () => { c.style.transform = ''; });
-  });
-
-  // Boutons aimantés
-  if (!calme && !tactile) document.querySelectorAll('.aimant').forEach(b => {
-    b.addEventListener('pointermove', e => {
-      const r = b.getBoundingClientRect();
-      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px,${(e.clientY - r.top - r.height / 2) * .28}px)`;
-    });
-    b.addEventListener('pointerleave', () => { b.style.transform = ''; });
-  });
-
   // L'année du pied de page
   document.querySelectorAll('[data-annee]').forEach(el => { el.textContent = new Date().getFullYear(); });
 })();

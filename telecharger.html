@@ -20,7 +20,7 @@
   color:var(--texte);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;appearance:none}
 .obtenir textarea{min-height:120px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.5;word-break:break-all}
 .obtenir input::placeholder,.obtenir textarea::placeholder{color:var(--texte3);font-family:var(--police);font-size:15px}
-.obtenir input:focus,.obtenir textarea:focus{border-color:rgba(185,179,255,.6);box-shadow:0 0 0 4px rgba(109,93,252,.15)}
+.obtenir input:focus,.obtenir textarea:focus{border-color:rgba(224,162,127,.6);box-shadow:0 0 0 4px rgba(217,103,63,.15)}
 .obtenir [aria-invalid="true"]{border-color:rgba(239,111,92,.7)}
 .obtenir .envoyer{width:100%;height:54px;font-size:16px;margin-top:4px}
 .obtenir .envoyer[disabled]{opacity:.6;cursor:progress}
@@ -41,7 +41,7 @@
 .paquet .poids{color:var(--texte3);font-size:13.5px;margin:2px 0 18px}
 .paquet p{flex:1}
 .paquet .btn{margin-top:20px;width:100%}
-.paquet.conseille{border-color:rgba(185,179,255,.45);background:linear-gradient(180deg,rgba(109,93,252,.12),rgba(255,255,255,.02))}
+.paquet.conseille{border-color:rgba(224,162,127,.45);background:linear-gradient(180deg,rgba(217,103,63,.12),rgba(255,255,255,.02))}
 .paquet .pastille-c{display:none;position:absolute;top:22px;right:22px;font-size:12px;padding:4px 10px;border-radius:999px;color:#f3d9a4;border:1px solid rgba(243,217,164,.35)}
 .paquet.conseille .pastille-c{display:inline-block}
 .version{display:inline-flex;gap:10px;align-items:center;margin-top:16px;font-size:14px;color:var(--texte2)}
@@ -83,7 +83,7 @@
     <div class="enveloppe">
       <form class="carte obtenir revele" id="obtenir" novalidate>
         <h2>Obtenir vos liens de téléchargement</h2>
-        <p class="intro">Le serveur de BudappsAI vérifie que la licence correspond bien à cette adresse, puis fournit les liens, valables une heure. Rien n'est conservé.</p>
+        <p class="intro">Le serveur de BudappsAI vérifie que la licence correspond bien à cette adresse, puis fournit des liens valables une heure. Rien n'est conservé.</p>
         <div class="champ">
           <label for="courriel">Courriel du compte</label>
           <input id="courriel" name="courriel" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false">
@@ -125,7 +125,7 @@
         </div>
       </div>
 
-      <p class="licence revele"><strong>Une licence, ou un code d'accès, est nécessaire</strong> pour télécharger comme pour ouvrir PROJETLIA. La licence vous est envoyée par courriel après l'abonnement (voir les <a href="tarifs.html" style="text-decoration:underline">tarifs</a>). Pour découvrir le logiciel avant de l'acheter, parcourez la <a href="demo.html" style="text-decoration:underline">démo guidée</a>.</p>
+      <p class="licence revele"><strong>Une licence ou un code d'accès est nécessaire</strong> pour télécharger comme pour ouvrir PROJETLIA. La licence vous est envoyée par courriel après l'abonnement (voir les <a href="tarifs.html" style="text-decoration:underline">tarifs</a>). Pour découvrir le logiciel avant de l'acheter, parcourez la <a href="demo.html" style="text-decoration:underline">démo guidée</a>.</p>
 
       <div class="marche">
         <div class="carte revele">

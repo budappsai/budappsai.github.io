@@ -25,6 +25,8 @@ APPLIS = [
     ('ENERGIA', 'ENERGIA', 'energia', "Tarifs de l'électricité, RTAA DOM, décret tertiaire, aides"),
     ('BTPEDIA', 'BTPEDIA', 'btpedia', "TVA des travaux, RE2020, RTAA DOM, DTU, assurances construction"),
     ('FOREVER8', 'Forever 8', 'pilotia', "Calendrier fiscal, mentions obligatoires des factures"),
+    ('RSE', 'Culture RSE', 'rse', "VSME, CSRD, biodéchets, DUERP, index de l'égalité, Sapin II, devoir de vigilance"),
+    ('FORMATION', 'Formation', 'formation', "Facture électronique, délais de paiement, micro-foncier, DPAE, règlement sur l'IA"),
     ('ATELIER', 'Commun', 'encyclo', "SMIC, taux d'emprunt, index BT, prix de l'énergie, facture électronique"),
 ]
 
@@ -44,14 +46,15 @@ def lire():
             items = []
         if not items:
             continue
-        dates = sorted(i.get('verifie_le', '') for i in items if i.get('verifie_le'))
-        lignes.append((nom, couleur, theme, len(items), dates[-1] if dates else ''))
+        # Un point sans date de vérification n'est pas compté comme suivi.
+        dates = sorted(i['verifie_le'] for i in items if i.get('verifie_le'))
+        if dates:
+            lignes.append((nom, couleur, theme, len(dates), dates[-1]))
     return lignes
 
 
 def bloc(lignes):
     total = sum(l[3] for l in lignes)
-    derniere = max((l[4] for l in lignes), default='')
     rangs = '\n'.join(
         f'        <div class="pays-ligne">\n'
         f'          <div class="pays-app"><b style="--c:var(--{c})">{n}</b><span>{t}</span></div>\n'
@@ -63,11 +66,11 @@ def bloc(lignes):
     <div class="enveloppe">
       <div class="etiquette revele">Veille réglementaire</div>
       <h2 data-mots>Des barèmes <span class="degrade">tenus à jour</span></h2>
-      <p class="chapeau revele d2">{total} barèmes et textes officiels sont suivis dans les applications, chacun relié à sa source (service-public.fr, Légifrance, URSSAF, INSEE, ADEME…) et daté de sa dernière vérification. L'application affiche cette date : un chiffre ancien ne passe pas inaperçu. Dernière campagne de veille : {_date(derniere)}.</p>
+      <p class="chapeau revele d2">{total} barèmes et textes officiels sont suivis dans les applications, chacun relié à sa source (service-public.fr, Légifrance, URSSAF, INSEE, ADEME…) et daté de sa dernière vérification. L'application affiche cette date : un chiffre ancien ne passe pas inaperçu.</p>
       <div class="pays revele">
 {rangs}
       </div>
-      <p class="pays-limites revele">Une valeur qui change n'est jamais corrigée automatiquement : elle est relue, puis modifiée à tous les endroits où elle sert, et une nouvelle version est publiée.</p>
+      <p class="pays-limites revele">Une valeur qui change n'est jamais corrigée automatiquement : elle est relue puis modifiée partout où elle sert. Une nouvelle version est alors publiée.</p>
     </div>
   </section>
   {FIN}'''

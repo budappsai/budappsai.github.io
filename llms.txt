@@ -1,15 +1,14 @@
 # BudappsAI — PROJETLIA
 
-> PROJETLIA est un logiciel de bureau (macOS, Windows) édité par BudappsAI : sept applications reliées par un même dossier client — CREATA (business plan, financement, faisabilité), JURIDIA (obligations juridiques), BTPEDIA et ENCYCLOPEDIA (plans, coupes, 3D, métré du bâtiment), ENERGIA (consommation énergétique), PATRIMONIA (patrimoine immobilier locatif), Forever 8 (suivi de l'entreprise au quotidien : affaires, clients réguliers, trésorerie, réel face au prévisionnel). Interface en sept langues ; règles de six pays pour CREATA. Les données restent sur l'ordinateur de l'utilisateur.
+> PROJETLIA est un logiciel de bureau (macOS, Windows) édité par BudappsAI : neuf applications reliées par un même dossier client — CREATA (business plan, financement, faisabilité), JURIDIA (obligations juridiques), BTPEDIA et ENCYCLOPEDIA (plans, coupes, 3D, métré du bâtiment), ENERGIA (consommation énergétique), PATRIMONIA (patrimoine immobilier locatif), Forever 8 (suivi de l'entreprise au quotidien : affaires, clients réguliers, trésorerie, réel face au prévisionnel), Culture RSE et Formation (formule Pro). Interface en sept langues ; règles de six pays pour CREATA. Les données restent sur l'ordinateur de l'utilisateur.
 
-Tarifs (prix nets, TVA non applicable, art. 294 du CGI) : Standard 50 € par mois, Pro 250 € par mois et par poste, Structures dès 165 € par poste, Forever 8 seul 25 € par mois. Sans engagement, ou engagement d'un an (deux mois offerts) ou de trois ans (10 % de moins chaque année, prix garanti).
+Tarifs (prix nets, TVA non applicable, art. 294 du CGI) : Standard 50 € par mois, Pro 250 € par mois et par poste, Structures dès 165 € par poste, Forever 8 50 € par mois uniquement avec Standard. Sans engagement, ou engagement d'un an (deux mois offerts) ou de trois ans (10 % de moins chaque année, prix garanti).
 
 Services de BudappsAI : formation à l'utilisation (450 à 1 000 € par jour), conseil en BTP et en finance d'entreprise (sur devis), veille réglementaire et financière (50 € par mois, toute l'application, tous pays). Installation sans frais : aucune intervention chez le client.
 
 ## Pages
 - [PROJETLIA](https://www.budappsai.com/projetlia.html)
 - [Tarifs et services](https://www.budappsai.com/tarifs.html)
-- [Présentation de l'application](https://www.budappsai.com/demo.html)
 - [Vos données](https://www.budappsai.com/donnees.html)
 - [Conditions générales](https://www.budappsai.com/cgv.html)
 - [Droits d'auteur](https://www.budappsai.com/droits-auteur.html)

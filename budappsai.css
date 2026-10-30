@@ -7,7 +7,7 @@
   --fond:#09090b; --fond2:#111116; --fond3:#16161c; --carte:rgba(255,255,255,.035); --bord:rgba(255,255,255,.09);
   --texte:#efebe3; --texte2:#a6a3af; --texte3:#6f6c79;
   --violet:#d9673f; --bleu:#3b6cf6; --corail:#ef6f5c; --or:#e8c46a; --vert:#2fb67c; --lilas:#e0a27f;
-  --creata:#5b4bd6; --juridia:#e0342f; --btpedia:#ef8a1f; --energia:#18a24a; --patrimonia:#12a0e0; --pilotia:#12948a; --encyclo:#b8520e;
+  --creata:#5b4bd6; --juridia:#e0342f; --btpedia:#ef8a1f; --energia:#18a24a; --patrimonia:#12a0e0; --pilotia:#12948a; --encyclo:#b8520e;--rse:#0f766e;--formation:#c2410c;
   --r:22px;
   --police:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI Variable Display","Segoe UI",Inter,Roboto,system-ui,sans-serif;
   --ressort:cubic-bezier(.2,.8,.2,1);
@@ -582,7 +582,12 @@ section{padding:96px 0 112px}
 .carte{border-radius:var(--r);background:var(--carte);transition:border-color .3s,background .3s}
 .carte::after{display:none}
 .carte::before{display:none}
-.portes,.portes.p4{gap:0;border-top:1px solid var(--bord);counter-reset:porte;margin-top:48px}
+.portes.p3{grid-template-columns:repeat(3,1fr)}
+.portes.p3 .porte{border-bottom:1px solid var(--bord)}
+.portes.p3 .porte:nth-child(3n){border-right:0}
+@media (max-width:1100px){.portes.p3{grid-template-columns:1fr 1fr}.portes.p3 .porte:nth-child(3n){border-right:1px solid var(--bord)}.portes.p3 .porte:nth-child(2n){border-right:0}}
+@media (max-width:640px){.portes.p3{grid-template-columns:1fr}.portes.p3 .porte{border-right:0!important}}
+.portes,.portes.p4,.portes.p3{gap:0;border-top:1px solid var(--bord);counter-reset:porte;margin-top:48px}
 .porte{counter-increment:porte;min-height:0;padding:20px 26px 32px;border:0;border-radius:0;border-right:1px solid var(--bord);transition:background .3s}
 .porte:last-child{border-right:0}
 .porte::before{display:block;position:static;background:none;opacity:1;content:counter(porte,decimal-leading-zero);font-size:13px;color:var(--corail);font-variant-numeric:tabular-nums;margin-bottom:44px}

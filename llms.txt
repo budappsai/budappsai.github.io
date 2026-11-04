@@ -10,6 +10,7 @@ Services de BudappsAI : formation à l'utilisation (450 à 1 000 € par jour), 
 - [PROJETLIA](https://www.budappsai.com/projetlia.html)
 - [Exemple : entreprise existante](https://www.budappsai.com/entreprise-existante.html) : trois exercices, un diagnostic et des pistes chiffrées avec CREATA
 - [Guide : faire son business plan en Guyane](https://www.budappsai.com/business-plan-guyane.html) : étapes, fiscalité outre-mer (ZFANG) et aides à vérifier, avec sources officielles
+- [PROJETLIA avec Claude](https://www.budappsai.com/projetlia-avec-claude.html) : connecteur MCP gratuit (aides et démarches, calculs simples, fiches BTP), adresse https://projetlia-guide.activation-worker.workers.dev/mcp
 - [Tarifs et services](https://www.budappsai.com/tarifs.html)
 - [Vos données](https://www.budappsai.com/donnees.html)
 - [Conditions générales](https://www.budappsai.com/cgv.html)

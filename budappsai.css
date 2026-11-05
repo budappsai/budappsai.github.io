@@ -59,6 +59,7 @@ body.menu-ouvert .burger span:nth-child(3){transform:translateY(-6px) rotate(-45
 .boutons-tete{display:flex;gap:10px;align-items:center}
 .boutons-tete .btn{height:42px;padding:0 18px;font-size:14.5px}
 @media (max-width:1120px){.boutons-tete .demo{display:none}}
+@media (max-width:1080px){nav.liens{gap:18px;font-size:14px}}
 
 /* ── Boutons ──────────────────────────────────────────────────────────── */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;

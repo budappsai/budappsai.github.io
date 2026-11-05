@@ -12,6 +12,7 @@ LOGO = ('<span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidd
 FLECHE = '<svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>'
 LIENS = [('./', 'Accueil', 'index.html'), ('entreprise.html', "L'entreprise", 'entreprise.html'), ('vision.html', 'Notre vision', 'vision.html'),
          ('projetlia.html', 'Nos applications', 'projetlia.html'),
+         ('projetlia-avec-claude.html', 'Connecteur Claude', 'projetlia-avec-claude.html'),
          ('tarifs.html', 'Tarifs', 'tarifs.html'), ('contact.html', 'Contact', 'contact.html')]
 
 

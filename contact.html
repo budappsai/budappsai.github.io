@@ -85,6 +85,7 @@ form.fait .merci{display:block}
             <option value="structures">Formule Structures (plusieurs postes)</option>
             <option value="forever8">Je choisis Forever 8</option>
             <option value="formation">Une formation à l'utilisation</option>
+            <option value="formation-ia">Une formation à l'intelligence artificielle</option>
             <option value="conseil">Du conseil en BTP ou en finance</option>
             <option value="veille">La veille réglementaire et financière</option>
             <option value="mesure">Power BI, Excel, sur mesure ou API</option>
@@ -128,7 +129,7 @@ form.fait .merci{display:block}
 (() => {
   const f = document.getElementById('formulaire'), sujet = document.getElementById('sujet');
   const OBJETS = { question: 'Question sur PROJETLIA', standard: 'Formule Standard', pro: 'Formule Pro', structures: 'Formule Structures', forever8: 'Forever 8',
-                   formation: 'Formation à l\'utilisation', conseil: 'Conseil en BTP ou en finance', veille: 'Veille réglementaire et financière', mesure: 'Power BI, Excel, sur mesure ou API',
+                   formation: 'Formation à l\'utilisation', 'formation-ia': 'Formation à l\'intelligence artificielle', conseil: 'Conseil en BTP ou en finance', veille: 'Veille réglementaire et financière', mesure: 'Power BI, Excel, sur mesure ou API',
                    prevenu: 'Être prévenu des prochaines applications', autre: 'Message depuis le site' };
   // Le sujet peut venir d'un bouton de l'accueil (« Choisir Pro »…)
   const venu = new URLSearchParams(location.search).get('sujet');

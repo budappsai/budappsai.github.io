@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulateurs à intégrer sur votre site, à vos couleurs — BudappsAI</title>
+<meta name="description" content="Un simulateur de calcul à poser sur le site de votre structure, à ses couleurs, mis à jour par BudappsAI : cotisations de micro-entrepreneur, TVA, point mort, aides. Aucune donnée de visiteur conservée.">
+<meta name="theme-color" content="#09090b">
+<link rel="canonical" href="https://www.budappsai.com/simulateurs.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Simulateurs à intégrer sur votre site — BudappsAI">
+<meta property="og:description" content="Un simulateur de calcul à poser sur le site de votre structure, à ses couleurs, mis à jour par BudappsAI : cotisations de micro-entrepreneur, TVA, point mort, aides. Aucune donnée de visiteur conservée.">
+<meta property="og:image" content="https://www.budappsai.com/img/partage.jpg">
+<link rel="stylesheet" href="budappsai.css">
+<style>
+.apercu{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:22px;align-items:start}
+.apercu iframe{width:100%;min-height:600px;border:1px solid var(--bord);border-radius:14px;background:#fff}
+.reglages{display:grid;gap:12px}
+.reglages label{display:grid;gap:5px;font-size:14px;color:var(--texte2)}
+.reglages input[type=color]{width:100%;height:42px;border:1px solid var(--bord);border-radius:8px;background:transparent;padding:2px}
+.reglages input[type=text]{width:100%;padding:10px;border:1px solid var(--bord);border-radius:8px;background:var(--fond2);color:var(--texte);font:inherit}
+.code{background:var(--fond2);border:1px solid var(--bord);border-radius:10px;padding:14px;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre-wrap;word-break:break-all;color:var(--texte2)}
+@media(max-width:900px){.apercu{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="lecteur-seul" href="#contenu">Aller au contenu</a>
+<div class="ciel" aria-hidden="true"><div class="points"></div></div>
+<!--TETE-->
+<header class="tete">
+  <div class="enveloppe barre">
+    <a class="marque" href="./" aria-label="BudappsAI, accueil"><span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidden="true"><path d="M512 800V420" stroke="#fff" stroke-width="64" stroke-linecap="round"/><path d="M520 668C410 680 300 616 282 476C412 462 512 532 520 668Z"/><path d="M504 606C600 616 702 556 724 436C612 426 512 486 504 606Z"/><circle cx="512" cy="356" r="98"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+    <nav class="liens" aria-label="Navigation principale"><a href="./">Accueil</a><a href="entreprise.html">L'entreprise</a><a href="vision.html">Notre vision</a><a href="projetlia.html">Nos applications</a><a href="projetlia-avec-claude.html">Connecteur Claude</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a></nav>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-mobile"><a href="./">Accueil</a><a href="entreprise.html">L'entreprise</a><a href="vision.html">Notre vision</a><a href="projetlia.html">Nos applications</a><a href="projetlia-avec-claude.html">Connecteur Claude</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a></div>
+<!--/TETE-->
+
+<main id="contenu">
+  <div class="enveloppe page-tete">
+    <div class="etiquette revele">Pour les structures d'accompagnement</div>
+    <h1 data-mots>Un simulateur <span class="degrade">sur votre site</span>, à vos couleurs</h1>
+    <p class="chapeau revele d3">Les moteurs de calcul de PROJETLIA, affichés sur le site de votre structure sous la forme d'un simulateur à vos couleurs, tenu à jour par BudappsAI. Essayez le premier ci-dessous.</p>
+  </div>
+
+  <section style="padding-top:30px">
+    <div class="enveloppe">
+      <div class="etiquette revele">Essayez-le</div>
+      <h2 data-mots>Cotisations d'un micro-entrepreneur</h2>
+      <div class="apercu">
+        <iframe id="sim" title="Simulateur de cotisations de micro-entrepreneur" src="simulateurs/cotisations.html?lien=https%3A%2F%2Fwww.budappsai.com%2Fcontact.html&libelle=Parler%20%C3%A0%20un%20conseiller" loading="lazy"></iframe>
+        <div class="reglages carte">
+          <h3 style="margin:0">Aux couleurs de votre structure</h3>
+          <label>Couleur principale<input type="color" id="c_couleur" value="#d9673f"></label>
+          <label>Couleur de fond<input type="color" id="c_fond" value="#ffffff"></label>
+          <label>Couleur du texte<input type="color" id="c_texte" value="#1d1b18"></label>
+          <label>Bouton de fin de parcours<input type="text" id="c_libelle" value="Parler à un conseiller" maxlength="60"></label>
+          <p class="precision" style="margin:0;font-size:13px;color:var(--texte3)">Le bouton renvoie vers l'adresse de votre choix : votre page de rendez-vous, votre courriel ou votre formulaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <div class="etiquette revele">Ce que vous obtenez</div>
+      <h2 data-mots>Un bloc à poser sur votre page</h2>
+      <div class="etapes-equipe">
+        <div class="carte revele"><h3>Un bloc à vos couleurs</h3><p>Un cadre à ajouter à votre page. Couleurs, texte du bouton et adresse de fin de parcours sont réglés par vous.</p></div>
+        <div class="carte revele d1"><h3>Des barèmes suivis</h3><p>Les taux sont ceux de l'année en cours. Leur mise à jour, assurée par notre veille réglementaire, fait partie de l'accord que nous fixons ensemble.</p></div>
+        <div class="carte revele d2"><h3>Aucune donnée conservée</h3><p>Le calcul se fait dans le navigateur du visiteur. Rien n'est enregistré ni transmis, et aucun cookie n'est posé.</p></div>
+        <div class="carte revele d3"><h3>Un parcours qui mène à vous</h3><p>En fin de simulation, le visiteur est renvoyé vers un conseiller de votre structure.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <div class="etiquette revele">Intégration</div>
+      <h2 data-mots>Le code à copier</h2>
+      <p class="chapeau revele d2">Il reprend les réglages choisis plus haut : le cadre et un court script qui l'ajuste à la hauteur du simulateur, y compris sur téléphone. Adaptez l'adresse du bouton à la vôtre.</p>
+      <div class="code revele" id="code" tabindex="0"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <div class="etiquette revele">À venir</div>
+      <h2 data-mots>D'autres simulateurs, des mêmes moteurs</h2>
+      <p class="chapeau revele d2">Les moteurs de PROJETLIA calculent déjà ce qui suit. Chacun peut devenir un simulateur de la même forme, à la demande :</p>
+      <ul class="chapeau revele d2" style="padding-left:22px">
+        <li>TVA de chaque territoire et octroi de mer</li>
+        <li>Point mort, mensualité d'emprunt, prix de vente pour une marge voulue</li>
+        <li>Rendement locatif, métré et quantités de matériaux</li>
+        <li>Aides et démarches : ZFANG, ACRE, aides régionales</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <div class="etiquette revele">À savoir</div>
+      <h2 data-mots>Des résultats indicatifs, un engagement de mise à jour</h2>
+      <p class="chapeau revele d2">Chaque résultat porte la mention « informations indicatives » : un simulateur éclaire, il ne remplace ni la déclaration officielle ni l'avis d'un professionnel. La mise à jour des barèmes fait partie de l'accord, avec la disponibilité du service, fixés ensemble dans un contrat.</p>
+      <p class="chapeau revele d2">Nous cherchons une première structure pour l'essayer avec nous, à un tarif réduit, en échange d'un témoignage.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="enveloppe">
+      <div class="final revele">
+        <h2 data-mots>Un simulateur pour votre structure ?</h2>
+        <p class="chapeau">Chambre consulaire, réseau d'accompagnement, organisme de financement, banque, cabinet comptable ou collectivité : dites-nous ce que vos visiteurs cherchent à calculer. Tarif sur devis.</p>
+        <div class="actions"><a class="btn btn-plein aimant" href="contact.html?sujet=mesure">Nous écrire <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="btn aimant" href="tarifs.html#services">Voir nos services</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--PIED-->
+<footer class="pied">
+  <div class="enveloppe">
+    <div class="colonnes">
+      <div><a class="marque" href="./"><span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidden="true"><path d="M512 800V420" stroke="#fff" stroke-width="64" stroke-linecap="round"/><path d="M520 668C410 680 300 616 282 476C412 462 512 532 520 668Z"/><path d="M504 606C600 616 702 556 724 436C612 426 512 486 504 606Z"/><circle cx="512" cy="356" r="98"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
+        <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
+      <div><h4>Applications</h4><ul><li><a href="projetlia.html">PROJETLIA</a></li><li><a href="tarifs.html#services">Nos services</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="business-plan-guyane.html">Guide : business plan en Guyane</a></li><li><a href="projetlia-avec-claude.html">PROJETLIA avec Claude</a></li><li><a href="simulateurs.html">Simulateurs pour structures</a></li><li><a href="connecteurs-ia.html">Connecteurs IA pour entreprises</a></li><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="droits-auteur.html">Droits d'auteur</a></li></ul></div>
+    </div>
+    <div class="geant" aria-hidden="true">budappsai</div>
+    <div class="bas"><span>© <span data-annee>2026</span> BudappsAI. Tous droits réservés.</span><span>Aucun cookie, aucun traceur.</span></div>
+  </div>
+</footer>
+<!--/PIED-->
+<script src="budappsai.js"></script>
+<script>
+(function(){
+  var f=document.getElementById('sim'), code=document.getElementById('code');
+  var ids=['couleur','fond','texte','libelle'];
+  function url(abs){
+    var p=new URLSearchParams();
+    p.set('couleur',document.getElementById('c_couleur').value);
+    p.set('fond',document.getElementById('c_fond').value);
+    p.set('texte',document.getElementById('c_texte').value);
+    p.set('lien',abs?'https://votre-site.fr/rendez-vous':'https://www.budappsai.com/contact.html');
+    p.set('libelle',document.getElementById('c_libelle').value||'Parler \u00e0 un conseiller');
+    return (abs?'https://www.budappsai.com/':'')+'simulateurs/cotisations.html?'+p.toString();
+  }
+  function ligne(){
+    return '<iframe id="budappsai-sim" src="'+url(true)+'" title="Simulateur de cotisations" style="width:100%;border:0;min-height:1300px" loading="lazy"></iframe>\n'
+      +'<script>addEventListener("message",function(e){if(e.origin==="https://www.budappsai.com"&&e.data&&e.data.budappsaiSimulateur==="hauteur")document.getElementById("budappsai-sim").style.height=(e.data.h+4)+"px"})<\/script>';
+  }
+  function maj(){
+    f.src=url(false);
+    code.textContent=ligne();
+  }
+  ids.forEach(function(i){document.getElementById('c_'+i).addEventListener('change',maj);});
+  document.getElementById('c_libelle').addEventListener('input',maj);
+  code.textContent=ligne();
+  window.addEventListener('message',function(e){
+    if(e.origin===location.origin && e.data && e.data.budappsaiSimulateur==='hauteur') f.style.height=Math.max(600,e.data.h+4)+'px';
+  });
+})();
+</script>
+</body>
+</html>

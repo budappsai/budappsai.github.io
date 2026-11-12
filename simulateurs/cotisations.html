@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Simulateur de cotisations de micro-entrepreneur</title>
+<style>
+:root{--accent:#d9673f;--fond:#ffffff;--texte:#1d1b18;--doux:#6a655c;--ligne:#e3ded4;--carte:#f7f4ee}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font:16px/1.5 -apple-system,"Segoe UI",Roboto,system-ui,sans-serif}
+.sim{max-width:760px;margin:0 auto;padding:20px 16px 28px}
+h1{font-size:21px;line-height:1.25;margin:0 0 4px}
+.sous{color:var(--doux);font-size:14px;margin:0 0 18px}
+fieldset{border:1px solid var(--ligne);border-radius:10px;padding:12px 14px 6px;margin:0 0 14px;background:var(--carte)}
+legend{font-weight:600;font-size:14px;padding:0 6px}
+.ligne{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center;margin:0 0 8px}
+.ligne label{font-size:14px}
+.ligne small{display:block;color:var(--doux);font-size:12px}
+input[type=number],select{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--ligne);border-radius:8px;background:var(--fond);color:var(--texte)}
+input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.choix{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 8px}
+.choix label{font-size:13px;color:var(--doux);display:block;margin:0 0 3px}
+.coche{display:flex;gap:8px;align-items:flex-start;font-size:14px;margin:4px 0 8px}
+.coche input{margin-top:4px;accent-color:var(--accent)}
+.res{border:2px solid var(--accent);border-radius:12px;padding:14px 16px;margin:6px 0 12px}
+.res .grand{font-size:30px;font-weight:700;color:var(--accent);line-height:1.1}
+.res .rangee{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:8px;font-size:14px}
+.res .rangee b{font-size:16px}
+.alerte{background:#fff4df;border:1px solid #ecc97a;color:#5b4310;border-radius:8px;padding:8px 12px;font-size:13px;margin:0 0 10px}
+.alerte[hidden],#note_dom[hidden],.fin[hidden],.coche[hidden],#bloc_periode[hidden]{display:none}
+.fin{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:14px 0 10px}
+.bouton{display:inline-block;background:var(--accent);color:var(--surbouton,#fff);font-weight:600;padding:10px 18px;border-radius:999px;text-decoration:none;font-size:15px}
+.mention{color:var(--doux);font-size:12px;line-height:1.5;margin:0}
+@media(max-width:520px){.ligne{grid-template-columns:1fr}.choix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="sim">
+  <h1>Combien de cotisations en micro-entreprise ?</h1>
+  <p class="sous">Estimation des cotisations sociales sur votre chiffre d'affaires annuel, barème 2026.</p>
+
+  <fieldset>
+    <legend>Votre chiffre d'affaires annuel</legend>
+    <div class="ligne"><label for="ca_vente">Ventes de marchandises, hébergement, restauration<small>Commerce, vente à emporter, location meublée classée…</small></label><input id="ca_vente" type="number" min="0" step="100" inputmode="decimal" placeholder="0"></div>
+    <div class="ligne"><label for="ca_service_bic">Prestations commerciales ou artisanales<small>Travaux, réparation, transport, location meublée non classée…</small></label><input id="ca_service_bic" type="number" min="0" step="100" inputmode="decimal" placeholder="0"></div>
+    <div class="ligne"><label for="ca_bnc">Prestations libérales<small>Conseil, formation, informatique, services intellectuels (SSI)</small></label><input id="ca_bnc" type="number" min="0" step="100" inputmode="decimal" placeholder="0"></div>
+    <div class="ligne"><label for="ca_bnc_cipav">Professions libérales réglementées<small>Architecte, géomètre, psychologue, ostéopathe… (Cipav)</small></label><input id="ca_bnc_cipav" type="number" min="0" step="100" inputmode="decimal" placeholder="0"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Votre situation</legend>
+    <div class="choix">
+      <div><label for="territoire">Où est exercée l'activité ?</label>
+        <select id="territoire"><option value="metropole">France métropolitaine</option><option value="dom">Outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte)</option></select></div>
+      <div id="bloc_periode" hidden><label for="periode">Ancienneté de l'activité</label>
+        <select id="periode"><option value="debut">Jusqu'à la fin du 8e trimestre civil d'activité</option><option value="an3">Jusqu'à la fin de la 3e année civile</option><option value="courant">Au-delà</option></select></div>
+    </div>
+    <p class="mention" id="note_dom" hidden style="margin:0 0 8px">En outre-mer, l'ACRE ne s'ajoute pas aux taux réduits de début d'activité, plus favorables.</p>
+    <div class="coche" id="bloc_acre"><input type="checkbox" id="acre"><label for="acre">Je crée mon activité et je remplis les conditions de l'ACRE (création depuis le 1er juillet 2026, public éligible, demande faite sous 60 jours)</label></div>
+  </fieldset>
+
+  <div class="alerte" id="alerte" role="status" hidden></div>
+  <div class="res" aria-live="polite">
+    <div>Cotisations estimées par an</div>
+    <div class="grand" id="r_cotis">0 €</div>
+    <div class="rangee"><span>Soit <b id="r_mois">0 €</b> par mois</span><span>Taux moyen <b id="r_taux">0 %</b></span><span>Chiffre d'affaires après cotisations <b id="r_net">0 €</b></span></div>
+  </div>
+
+  <div class="fin" id="fin" hidden><a class="bouton" id="lien" target="_top" rel="noopener"></a></div>
+  <p class="mention">Informations indicatives, sans valeur de conseil : elles ne remplacent ni la déclaration officielle ni l'avis d'un professionnel. Hors impôt sur le revenu, cotisation foncière des entreprises et frais professionnels. Sources : URSSAF (mon-entreprise.urssaf.fr, barèmes 2026), service-public.fr. Aucune donnée saisie n'est enregistrée ni transmise : le calcul se fait dans votre navigateur.</p>
+</main>
+<script>
+(function(){
+  // Part du chiffre d'affaires, par categorie et par situation (baremes 2026).
+  var TAUX={
+    vente:{metropole:0.123,dom:0.082,acre:0.092,dom_debut:0.021,dom_an3:0.062},
+    service_bic:{metropole:0.212,dom:0.142,acre:0.159,dom_debut:0.036,dom_an3:0.106},
+    bnc:{metropole:0.256,dom:0.174,acre:0.192,dom_debut:0.044,dom_an3:0.131},
+    bnc_cipav:{metropole:0.232,dom:0.155,acre:0.134,dom_debut:0.078,dom_an3:0.116}
+  };
+  var PLAFOND_VENTE=203100, PLAFOND_SERVICE=83600;
+  var CATS=['vente','service_bic','bnc','bnc_cipav'];
+  function colonne(territoire,periode,acre){
+    if(territoire==='dom') return periode==='debut'?'dom_debut':(periode==='an3'?'dom_an3':'dom');
+    return acre?'acre':'metropole';
+  }
+  function calcul(ca,territoire,periode,acre){
+    var col=colonne(territoire,periode,acre), total=0, cotis=0;
+    CATS.forEach(function(c){var v=Math.max(0,+ca[c]||0); total+=v; cotis+=v*TAUX[c][col];});
+    return {cotis:cotis,total:total,col:col};
+  }
+  if(typeof window==='undefined'){module.exports={calcul:calcul,TAUX:TAUX};return;}
+  var $=function(i){return document.getElementById(i)};
+  var eur=function(x){return Math.round(x).toLocaleString('fr-FR')+' €'};
+  // Personnalisation par l'adresse : ?couleur=%23005eb8&fond=%23ffffff&texte=%23111&lien=https://...&libelle=...
+  var p=new URLSearchParams(location.search), r=document.documentElement.style;
+  [['couleur','--accent'],['fond','--fond'],['texte','--texte']].forEach(function(a){
+    var v=p.get(a[0]); if(v && /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(v)) r.setProperty(a[1],v);
+  });
+  // Texte du bouton : noir ou blanc selon la clarte de la couleur choisie.
+  (function(){
+    var v=p.get('couleur'); if(!v || !/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(v)) return;
+    var h=v.slice(1); if(h.length===3) h=h.replace(/./g,'$&$&');
+    var l=(0.299*parseInt(h.substr(0,2),16)+0.587*parseInt(h.substr(2,2),16)+0.114*parseInt(h.substr(4,2),16))/255;
+    r.setProperty('--surbouton', l>0.62?'#1d1b18':'#fff');
+  })();
+  var lien=p.get('lien');
+  if(lien && /^(https:\/\/|mailto:)/i.test(lien)){
+    $('lien').href=lien; $('lien').textContent=(p.get('libelle')||'Parler à un conseiller').slice(0,60); $('fin').hidden=false;
+  }
+  function maj(){
+    var ca={}; CATS.forEach(function(c){ca[c]=$('ca_'+c).value;});
+    var terr=$('territoire').value, dom=terr==='dom';
+    $('bloc_periode').hidden=!dom; $('bloc_acre').hidden=dom; $('note_dom').hidden=!dom;
+    var acre=!dom && $('acre').checked;
+    var o=calcul(ca,terr,$('periode').value,acre);
+    $('r_cotis').textContent=eur(o.cotis); $('r_mois').textContent=eur(o.cotis/12);
+    $('r_taux').textContent=(o.total>0?(o.cotis/o.total*100).toLocaleString('fr-FR',{maximumFractionDigits:1}):'0')+' %';
+    $('r_net').textContent=eur(o.total-o.cotis);
+    var msg=[], serv=(+ca.service_bic||0)+(+ca.bnc||0)+(+ca.bnc_cipav||0);
+    if(o.total>PLAFOND_VENTE) msg.push('Au-delà de '+eur(PLAFOND_VENTE)+' de chiffre d’affaires, le régime micro-entreprise n’est plus possible.');
+    else if(serv>PLAFOND_SERVICE) msg.push('Les prestations de services sont limitées à '+eur(PLAFOND_SERVICE)+' par an en micro-entreprise.');
+    if(acre && o.total>0) msg.push('L’ACRE est réservée aux publics éligibles et doit être demandée : vérifiez votre droit avant de compter dessus.');
+    $('alerte').hidden=!msg.length; $('alerte').textContent=msg.join(' ');
+  }
+  document.querySelectorAll('input,select').forEach(function(e){e.addEventListener('input',maj);e.addEventListener('change',maj);});
+  maj();
+  // Hauteur communiquee a la page qui integre le simulateur (aucune autre donnee).
+  function haut(){try{parent.postMessage({budappsaiSimulateur:'hauteur',h:document.documentElement.scrollHeight},'*');}catch(e){}}
+  addEventListener('load',haut); new ResizeObserver(haut).observe(document.body);
+})();
+</script>
+</body>
+</html>

@@ -117,3 +117,6 @@ addEventListener('load', () => {
   const cible = location.hash && document.getElementById(location.hash.slice(1));
   if (cible) setTimeout(() => cible.scrollIntoView({ block: 'start' }), 120);
 });
+
+// Échap ferme un sous-menu ouvert au clavier
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const a=document.activeElement;if(a&&a.closest('nav.liens .groupe')){const p=a.closest('.groupe').querySelector(':scope>a');p.focus();p.blur();}}});

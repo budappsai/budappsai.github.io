@@ -497,6 +497,20 @@ footer.pied{position:relative;z-index:1;padding:64px 0 48px;color:var(--texte3);
 .e1{left:49%;top:58%}.e2{left:54%;top:50%;animation-delay:1.4s}.e3{left:47%;top:50%;animation-delay:2.8s}.e4{left:56%;top:60%;animation-delay:4.2s}.e5{left:52%;top:62%;animation-delay:5.6s}
 @keyframes etincelle{0%{opacity:0;transform:translate3d(0,0,0)}15%{opacity:.9}100%{opacity:0;transform:translate3d(14px,-150px,0)}}
 .defile{position:relative;z-index:1}
+.heros-mains{pointer-events:none}.heros-mains a,.heros-mains p,.heros-mains h1{pointer-events:auto}
+.lecture-mains{position:absolute;left:52.5%;top:53%;transform:translate(-50%,-50%);pointer-events:auto;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;background:none;border:0;padding:0;cursor:pointer;color:#f0e9dc;font:inherit}
+.lecture-mains .rond{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(240,234,222,.12);border:1px solid rgba(240,234,222,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 0 40px rgba(240,234,222,.35);transition:transform .25s,background .25s;animation:pouls 2.6s ease-in-out infinite}
+.lecture-mains svg{width:22px;height:22px;margin-left:3px}
+.lecture-mains .texte-lecture{font-size:13px;letter-spacing:.02em;white-space:nowrap;opacity:.85;text-shadow:0 1px 8px #000}
+.lecture-mains:hover .rond,.lecture-mains:focus-visible .rond{transform:scale(1.1);background:rgba(240,234,222,.25)}
+.lecture-mains:focus-visible{outline:none}.lecture-mains:focus-visible .rond{outline:2px solid #f0e9dc;outline-offset:4px}
+@keyframes pouls{0%,100%{box-shadow:0 0 24px rgba(240,234,222,.25)}50%{box-shadow:0 0 54px rgba(240,234,222,.55)}}
+.boite-video{padding:0;border:0;background:#000;border-radius:18px;width:min(92vw,1100px);overflow:visible;box-shadow:0 30px 120px rgba(0,0,0,.7)}
+.boite-video::backdrop{background:rgba(5,5,8,.82);backdrop-filter:blur(4px)}
+.boite-video video{display:block;width:100%;border-radius:18px}
+.fermer-video{position:absolute;top:-46px;right:0;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(20,20,26,.8);color:#fff;font-size:24px;line-height:1;cursor:pointer}
+@media (max-width:760px){.fermer-video{top:8px;right:8px;z-index:2}}
+@media (prefers-reduced-motion:reduce){.lecture-mains .rond{animation:none}}
 @media (min-width:1101px){.mains-cadre{left:0;width:108%;transform:none}}
 @media (max-width:1100px){.mains-cadre{bottom:3%;width:820px}}
 @media (max-width:760px){.mains-cadre{bottom:6%;width:640px}}

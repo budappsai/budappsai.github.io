@@ -44,9 +44,10 @@
 <!--/TETE-->
 
 <main id="contenu">
-  <div class="fond-mains" aria-hidden="true"><div class="mains-cadre">
+  <div class="fond-mains"><div class="mains-cadre">
     <img class="main-g" src="img/mains-fond.webp" alt="" width="2200" height="1228"><img class="main-d" src="img/mains-fond.webp" alt="" width="2200" height="1228">
-    <i class="lueur"></i><i class="etincelle e1"></i><i class="etincelle e2"></i><i class="etincelle e3"></i><i class="etincelle e4"></i><i class="etincelle e5"></i>
+    <i class="lueur" aria-hidden="true"></i>
+    <button type="button" class="lecture-mains" id="ouvrir-video" aria-haspopup="dialog" aria-label="Regarder la vidéo de présentation de BudappsAI (1 min 45)"><span class="rond"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="texte-lecture">Regarder la présentation</span></button><i class="etincelle e1" aria-hidden="true"></i><i class="etincelle e2" aria-hidden="true"></i><i class="etincelle e3" aria-hidden="true"></i><i class="etincelle e4" aria-hidden="true"></i><i class="etincelle e5" aria-hidden="true"></i>
   </div></div>
   <div class="enveloppe heros heros-mains">
     <p class="lieu revele">BudappsAI · Matoury, Guyane</p>
@@ -81,9 +82,28 @@
         <a class="carte porte revele d1" href="contact.html?sujet=mesure">
           <h3>Rapports Power BI et tableaux Excel</h3><p>Des tableaux de bord et de suivi faits pour votre activité. Power BI à partir de 500 €, Excel sur devis.</p>
           <span class="aller">Prendre contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
-        <a class="carte porte revele d2" href="contact.html?sujet=mesure">
-          <h3>Logiciels sur mesure</h3><p>Un logiciel conçu selon votre cahier des charges. À partir de 1 500 € sur devis.</p>
-          <span class="aller">Prendre contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        <a class="carte porte revele d2" href="modeles.html">
+          <h3>Logiciels sur mesure</h3><p>Un logiciel conçu selon votre cahier des charges, ou l'un de nos six modèles adapté à votre activité. À partir de 1 500 € sur devis.</p>
+          <span class="aller">Voir les modèles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Avec votre intelligence artificielle">
+    <div class="enveloppe">
+      <div class="etiquette revele">Avec votre IA</div>
+      <h2 data-mots>Le meilleur complément <span class="degrade">de votre intelligence artificielle</span></h2>
+      <p class="chapeau revele d2">Une IA rédige, résume et explique très bien. Elle calcule mal et ne connaît pas toujours la règle en vigueur. Nos applications font l'inverse : des moteurs de calcul précis, des barèmes suivis par notre veille, des chiffres qui citent leur source. Ensemble, votre IA parle et nos moteurs comptent.</p>
+      <div class="portes p3">
+        <a class="carte porte revele" href="projetlia-avec-claude.html">
+          <h3>Branchée sur Claude</h3><p>Un connecteur publié dans l'annuaire de Claude, gratuit, et le connecteur de la formule Pro qui travaille dans vos dossiers, avec anonymisation par défaut.</p>
+          <span class="aller">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        <a class="carte porte revele d1" href="connecteur-chatgpt.html">
+          <h3>Accessible à ChatGPT</h3><p>Un accès avancé, éteint par défaut, permet à ChatGPT de lire vos dossiers en lecture seule.</p>
+          <span class="aller">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+        <a class="carte porte revele d2" href="connecteurs-ia.html">
+          <h3>Votre IA, vos données</h3><p>Nous branchons l'IA de votre entreprise sur vos propres données et outils, en lecture seule par défaut.</p>
+          <span class="aller">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
       </div>
     </div>
   </section>
@@ -97,6 +117,19 @@
       </div>
     </div>
   </section>
+  <dialog class="boite-video" id="boite-video" aria-label="Vidéo de présentation de BudappsAI">
+    <button type="button" class="fermer-video" aria-label="Fermer la vidéo">×</button>
+    <video controls playsinline preload="none" poster="img/presentation-affiche.jpg">
+      <source src="media/budappsai-presentation.mp4" type="video/mp4">
+      Votre navigateur ne lit pas la vidéo : <a href="media/budappsai-presentation.mp4">la télécharger</a>.
+    </video>
+  </dialog>
+  <script>
+  (function(){var b=document.getElementById('ouvrir-video'),d=document.getElementById('boite-video');if(!b||!d||!d.showModal)return;var v=d.querySelector('video');
+  b.addEventListener('click',function(){d.showModal();var p=v.play();if(p&&p.catch)p.catch(function(){});});
+  d.querySelector('.fermer-video').addEventListener('click',function(){d.close()});
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});d.addEventListener('close',function(){v.pause();b.focus()});})();
+  </script>
 </main>
 
 <!--PIED-->
@@ -106,7 +139,7 @@
       <div><a class="marque" href="./"><span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidden="true"><path d="M512 800V420" stroke="#fff" stroke-width="64" stroke-linecap="round"/><path d="M520 668C410 680 300 616 282 476C412 462 512 532 520 668Z"/><path d="M504 606C600 616 702 556 724 436C612 426 512 486 504 606Z"/><circle cx="512" cy="356" r="98"/></svg></span><span class="nom">Budapps<span class="ai">AI</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
       <div><h4>Applications</h4><ul><li><a href="projetlia.html">PROJETLIA</a></li><li><a href="tarifs.html#services">Nos services</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
-      <div><h4>BudappsAI</h4><ul><li><a href="business-plan-guyane.html">Guide : business plan en Guyane</a></li><li><a href="projetlia-avec-claude.html">PROJETLIA avec Claude</a></li><li><a href="simulateurs.html">Simulateurs pour structures</a></li><li><a href="connecteurs-ia.html">Connecteurs IA pour entreprises</a></li><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="business-plan-guyane.html">Guide : business plan en Guyane</a></li><li><a href="projetlia-avec-claude.html">PROJETLIA avec Claude</a></li><li><a href="simulateurs.html">Simulateurs pour structures</a></li><li><a href="connecteurs-ia.html">Connecteurs IA pour entreprises</a></li><li><a href="modeles.html">Modèles d'applications</a></li><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
       <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="droits-auteur.html">Droits d'auteur</a></li></ul></div>
     </div>
     <div class="geant" aria-hidden="true">budappsai</div>

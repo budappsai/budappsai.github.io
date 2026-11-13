@@ -15,7 +15,7 @@ LIENS = [('./', 'Accueil', 'index.html', None), ('entreprise.html', "L'entrepris
              ('projetlia.html', 'PROJETLIA'), ('projetlia.html#creata', 'CREATA'), ('projetlia.html#juridia', 'JURIDIA'),
              ('projetlia.html#btpedia', 'BTPEDIA'), ('projetlia.html#energia', 'ENERGIA'), ('projetlia.html#patrimonia', 'PATRIMONIA'),
              ('projetlia.html#forever8', 'Forever 8'), ('projetlia.html#encyclopedie', 'Encyclopédie'), ('projetlia.html#rse', 'Culture RSE'),
-             ('projetlia.html#formation', 'Formation'), ('modeles.html', "Modèles d'applications")]),
+             ('projetlia.html#formation', 'Formation'), ('projetlia.html#a-savoir', 'À savoir'), ('modeles.html', "Modèles d'applications")]),
          ('projetlia-avec-claude.html', 'Connecteurs IA', 'projetlia-avec-claude.html', [
              ('projetlia-avec-claude.html', "Vue d'ensemble"), ('projetlia-avec-claude.html#gratuit', 'Claude, gratuit'),
              ('connecteur-claude.html', 'Claude, formule Pro'), ('connecteur-chatgpt.html', 'ChatGPT'),

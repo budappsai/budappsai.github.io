@@ -12,17 +12,17 @@ LOGO = ('<span class="logo"><svg viewBox="170 170 684 684" fill="#fff" aria-hidd
 FLECHE = '<svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>'
 LIENS = [('./', 'Accueil', 'index.html', None), ('entreprise.html', "L'entreprise", 'entreprise.html', None), ('vision.html', 'Notre vision', 'vision.html', None),
          ('projetlia.html', 'Nos applications', 'projetlia.html', [
-             ('projetlia.html', 'PROJETLIA'), ('projetlia.html#creata', 'CREATA'), ('projetlia.html#juridia', 'JURIDIA'),
-             ('projetlia.html#btpedia', 'BTPEDIA'), ('projetlia.html#energia', 'ENERGIA'), ('projetlia.html#patrimonia', 'PATRIMONIA'),
-             ('projetlia.html#forever8', 'Forever 8'), ('projetlia.html#encyclopedie', 'Encyclopédie'), ('projetlia.html#rse', 'Culture RSE'),
-             ('projetlia.html#formation', 'Formation'), ('projetlia.html#a-savoir', 'À savoir'), ('modeles.html', "Modèles d'applications")]),
+             ('projetlia.html', 'PROJETLIA'),
+             ('modele-etude-de-marche.html', 'Étude de marché'), ('modele-relation-clients.html', 'Relation clients'),
+             ('modele-production.html', 'Production et coûts'), ('modele-stocks-achats.html', 'Achats et stocks'),
+             ('modele-qualite.html', 'Qualité et conformité'), ('modele-secteur.html', 'Dossier pour un secteur')]),
          ('projetlia-avec-claude.html', 'Connecteurs IA', 'projetlia-avec-claude.html', [
              ('projetlia-avec-claude.html', "Vue d'ensemble"), ('projetlia-avec-claude.html#gratuit', 'Claude, gratuit'),
              ('connecteur-claude.html', 'Claude, formule Pro'), ('connecteur-chatgpt.html', 'ChatGPT'),
              ('connecteurs-ia.html', 'Pour votre entreprise')]),
          ('simulateurs.html', 'Simulateurs', 'simulateurs.html', None),
          ('tarifs.html', 'Tarifs', 'tarifs.html', None), ('contact.html', 'Contact', 'contact.html', None)]
-SOUS_PAGES = {'modeles.html': 'projetlia.html', 'connecteur-claude.html': 'projetlia-avec-claude.html',
+SOUS_PAGES = {'modeles.html': 'projetlia.html', 'modele-etude-de-marche.html': 'projetlia.html', 'modele-relation-clients.html': 'projetlia.html', 'modele-production.html': 'projetlia.html', 'modele-stocks-achats.html': 'projetlia.html', 'modele-qualite.html': 'projetlia.html', 'modele-secteur.html': 'projetlia.html', 'connecteur-claude.html': 'projetlia-avec-claude.html',
               'connecteur-chatgpt.html': 'projetlia-avec-claude.html', 'connecteurs-ia.html': 'projetlia-avec-claude.html'}
 
 

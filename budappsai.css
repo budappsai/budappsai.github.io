@@ -724,3 +724,5 @@ nav.liens .groupe>a:focus-visible{outline:2px solid var(--corail);outline-offset
 .capture-modele{margin:0}
 .capture-modele img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--bord);box-shadow:0 20px 50px -20px rgba(0,0,0,.45)}
 .capture-modele figcaption{margin-top:10px;font-size:14px;color:var(--texte3);text-align:center}
+/* Logo aux couleurs du vrai logo BudappsAI (bleu, violet, corail) */
+.logo{background:linear-gradient(to top right,#3b6cf6,#6d5dfc 50%,#ef6f5c)}

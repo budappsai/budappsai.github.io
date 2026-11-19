@@ -718,3 +718,9 @@ nav.liens .groupe>a:focus-visible{outline:2px solid var(--corail);outline-offset
 .tarif .tarif-engage a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .tarif .tarif-engage a:hover{color:var(--texte)}
 .tarif .tarif-par-appli{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--lilas)}
+.vignette{display:block;margin:-6px -6px 14px}.vignette img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--bord)}
+/* Captures des modeles d'applications */
+.capture-zone{padding-top:10px;padding-bottom:0}
+.capture-modele{margin:0}
+.capture-modele img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--bord);box-shadow:0 20px 50px -20px rgba(0,0,0,.45)}
+.capture-modele figcaption{margin-top:10px;font-size:14px;color:var(--texte3);text-align:center}

@@ -20,6 +20,7 @@ LIENS = [('./', 'Accueil', 'index.html', None), ('entreprise.html', "L'entrepris
              ('projetlia-avec-claude.html', "Vue d'ensemble"), ('projetlia-avec-claude.html#gratuit', 'Claude, gratuit'),
              ('connecteur-claude.html', 'Claude, formule Pro'), ('connecteur-chatgpt.html', 'ChatGPT'),
              ('connecteurs-ia.html', 'Pour votre entreprise')]),
+         ('constats.html', 'Mes constats', 'constats.html', None),
          ('simulateurs.html', 'Simulateurs', 'simulateurs.html', None),
          ('tarifs.html', 'Tarifs', 'tarifs.html', None), ('contact.html', 'Contact', 'contact.html', None)]
 SOUS_PAGES = {'modeles.html': 'projetlia.html', 'modele-etude-de-marche.html': 'projetlia.html', 'modele-relation-clients.html': 'projetlia.html', 'modele-production.html': 'projetlia.html', 'modele-stocks-achats.html': 'projetlia.html', 'modele-qualite.html': 'projetlia.html', 'modele-secteur.html': 'projetlia.html', 'connecteur-claude.html': 'projetlia-avec-claude.html',

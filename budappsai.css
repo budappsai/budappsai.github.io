@@ -726,3 +726,15 @@ nav.liens .groupe>a:focus-visible{outline:2px solid var(--corail);outline-offset
 .capture-modele figcaption{margin-top:10px;font-size:14px;color:var(--texte3);text-align:center}
 /* Logo aux couleurs du vrai logo BudappsAI (bleu, violet, corail) */
 .logo{background:linear-gradient(to top right,#3b6cf6,#6d5dfc 50%,#ef6f5c)}
+/* Page Mes constats */
+.constats-sommaire{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:15px}
+.constats-sommaire a{color:var(--texte2);text-decoration:underline;text-decoration-color:var(--bord);text-underline-offset:4px}
+.constat .capture-modele{margin:8px 0 22px}
+.constat-colonnes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.constat-colonnes ul{margin:8px 0 0;padding-left:18px;color:var(--texte2)}.constat-colonnes li{margin:6px 0}
+.lecon{margin:22px 0 10px;font-size:17px}
+.avis{margin:0 0 22px;padding:4px 0 4px 18px;border-left:2px solid var(--corail);font-style:italic;color:var(--texte2)}
+.avis p{margin:0}
+.avert-constat{padding:12px 16px;border-left:3px solid var(--corail);background:rgba(239,111,92,.08);color:var(--texte2);font-size:15px}
+.guide-achat{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:18px 20px;border:1px solid var(--bord);border-radius:var(--r);background:var(--carte)}
+.guide-achat div{display:flex;flex-direction:column;gap:4px;max-width:40em}.guide-achat span{color:var(--texte2);font-size:14.5px}

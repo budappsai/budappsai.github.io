@@ -20,6 +20,7 @@ Services de BudappsAI : formation à l'utilisation (450 à 1 000 € par jour), 
   - [Achats et stocks](https://www.budappsai.com/modele-stocks-achats.html)
   - [Qualité et conformité](https://www.budappsai.com/modele-qualite.html)
   - [Dossier de projet pour un secteur](https://www.budappsai.com/modele-secteur.html)
+- [Mes constats : six retours d'expérience avec l'IA, et les guides pratiques](https://www.budappsai.com/constats.html)
 - [Tarifs et services](https://www.budappsai.com/tarifs.html)
 - [Vos données](https://www.budappsai.com/donnees.html)
 - [Conditions générales](https://www.budappsai.com/cgv.html)

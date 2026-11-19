@@ -714,3 +714,7 @@ nav.liens .sous a:first-child{margin-bottom:4px;border-bottom:1px solid var(--bo
 @media (max-width:900px){.menu-mobile{max-height:calc(100dvh - 68px);overflow-y:auto}}
 @media (max-width:1100px) and (min-width:901px){nav.liens{gap:18px;font-size:14px}}
 nav.liens .groupe>a:focus-visible{outline:2px solid var(--corail);outline-offset:4px;border-radius:4px}
+.tarif .tarif-engage{margin:12px 0 0;font-size:13px;line-height:1.5;color:var(--texte3)}
+.tarif .tarif-engage a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.tarif .tarif-engage a:hover{color:var(--texte)}
+.tarif .tarif-par-appli{margin:6px 0 0;font-size:14px;font-weight:600;color:var(--lilas)}

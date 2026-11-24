@@ -16,8 +16,8 @@ LIENS = [('./', 'Accueil', 'index.html', None), ('entreprise.html', "L'entrepris
              ('modele-etude-de-marche.html', 'Étude de marché'), ('modele-relation-clients.html', 'Relation clients'),
              ('modele-production.html', 'Production et coûts'), ('modele-stocks-achats.html', 'Achats et stocks'),
              ('modele-qualite.html', 'Qualité et conformité'), ('modele-secteur.html', 'Dossier pour un secteur')]),
-         ('projetlia-avec-claude.html', 'Connecteurs IA', 'projetlia-avec-claude.html', [
-             ('projetlia-avec-claude.html', "Vue d'ensemble"), ('projetlia-avec-claude.html#gratuit', 'Claude, gratuit'),
+         ('projetlia-avec-claude.html', 'Moteurs et connecteurs IA', 'projetlia-avec-claude.html', [
+             ('projetlia-avec-claude.html', "Vue d'ensemble"), ('projetlia-avec-claude.html#moteurs', 'Les moteurs'), ('projetlia-avec-claude.html#gratuit', 'Claude, gratuit'),
              ('connecteur-claude.html', 'Claude, formule Pro'), ('connecteur-chatgpt.html', 'ChatGPT'),
              ('connecteurs-ia.html', 'Pour votre entreprise')]),
          ('constats.html', 'Mes constats', 'constats.html', None),
@@ -55,7 +55,7 @@ PIED = f'''<footer class="pied">
       <div><a class="marque" href="./">{LOGO}<span class="nom">Budappsai<span class="ai">.com</span></span></a>
         <p class="signature">Des applications pour décider rapidement. Conçues en Guyane.</p></div>
       <div><h4>Applications</h4><ul><li><a href="projetlia.html">Projé9</a></li><li><a href="tarifs.html#services">Nos services</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
-      <div><h4>BudappsAI</h4><ul><li><a href="business-plan-guyane.html">Guide : business plan en Guyane</a></li><li><a href="projetlia-avec-claude.html">Connecteurs IA</a></li><li><a href="simulateurs.html">Simulateurs pour structures</a></li><li><a href="connecteurs-ia.html">Votre IA, vos données (entreprises)</a></li><li><a href="modeles.html">Modèles d'applications</a></li><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
+      <div><h4>BudappsAI</h4><ul><li><a href="business-plan-guyane.html">Guide : business plan en Guyane</a></li><li><a href="projetlia-avec-claude.html">Moteurs et connecteurs IA</a></li><li><a href="simulateurs.html">Simulateurs pour structures</a></li><li><a href="connecteurs-ia.html">Votre IA, vos données (entreprises)</a></li><li><a href="modeles.html">Modèles d'applications</a></li><li><a href="donnees.html">Vos données</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:contact@budappsai.com">Courriel</a></li></ul></div>
       <div><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="droits-auteur.html">Droits d'auteur</a></li></ul></div>
     </div>
     <div class="geant" aria-hidden="true">budappsai</div>

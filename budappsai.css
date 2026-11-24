@@ -876,3 +876,12 @@ nav.liens .sous a:hover,nav.liens .sous a:focus-visible{background:rgba(106,67,2
 .installer-projet p{max-width:44em;margin:0 auto;font-size:18px;line-height:1.7;color:var(--texte2)}
 .installer-projet .actions{margin-top:34px;justify-content:center;gap:16px}
 .installer-projet .mac-bientot{margin-top:22px}
+
+/* Les moteurs (bientôt disponibles) */
+.moteurs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:32px}
+.carte.moteur{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px 24px 22px;border:1px solid var(--bord);border-radius:20px;background:rgba(255,255,255,.55)}
+.carte.moteur h3{margin:6px 0 0;font-size:20px}
+.carte.moteur p{margin:0;color:var(--texte2);font-size:15.5px;flex:1}
+.moteur-prix{font-size:14px;color:var(--texte2);display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.moteur-prix b{font-size:22px;color:var(--texte);font-weight:700;margin-right:4px}
+.bientot-dispo{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;color:#7a4510;background:rgba(240,185,138,.25);border:1px solid rgba(122,69,16,.25)}

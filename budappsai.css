@@ -810,9 +810,17 @@ a.porte:hover{background:rgba(255,255,255,.55)}
   -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 36%,transparent 70%);mask-image:radial-gradient(circle at 50% 50%,#000 36%,transparent 70%);
   animation:flotte 9s ease-in-out infinite}
 .bulle{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff,#d8c6f5 45%,#9f86d9 100%);box-shadow:0 8px 24px -6px rgba(106,67,216,.45)}
-.bulle.b1{width:34px;height:34px;top:12%;left:16%;animation:flotte 7s ease-in-out infinite}
-.bulle.b2{width:22px;height:22px;top:30%;right:6%;animation:flotte 8s ease-in-out -2s infinite}
-.bulle.b3{width:42px;height:42px;bottom:16%;left:8%;animation:flotte 10s ease-in-out -4s infinite}
+/* Les bulles tournent autour du nœud : orbites inclinées et aplaties, elles passent derrière puis devant */
+.heros-visuel img{position:relative;z-index:1}
+.bulle{top:50%;left:50%;z-index:2;
+  animation:orbite var(--t) linear infinite,devant var(--t) steps(1) infinite;animation-delay:var(--d),var(--d)}
+.bulle.b1{width:34px;height:34px;margin:-17px 0 0 -17px;--orb:min(230px,34vw);--incl:-18deg;--t:14s;--d:0s}
+.bulle.b2{width:22px;height:22px;margin:-11px 0 0 -11px;--orb:min(190px,28vw);--incl:24deg;--t:10s;--d:-4s}
+.bulle.b3{width:42px;height:42px;margin:-21px 0 0 -21px;--orb:min(265px,38vw);--incl:6deg;--t:18s;--d:-9s}
+@keyframes orbite{
+  from{transform:rotate(var(--incl)) scaleY(.38) rotate(0deg) translateX(var(--orb)) rotate(0deg) scaleY(2.63) rotate(calc(-1 * var(--incl)))}
+  to{transform:rotate(var(--incl)) scaleY(.38) rotate(360deg) translateX(var(--orb)) rotate(-360deg) scaleY(2.63) rotate(calc(-1 * var(--incl)))}}
+@keyframes devant{0%{z-index:2}50%{z-index:0}}
 @keyframes flotte{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 .atouts{list-style:none;margin:28px 0 0;padding:22px 8px;display:grid;grid-template-columns:repeat(4,1fr);
   background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.8);border-radius:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);

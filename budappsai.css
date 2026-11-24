@@ -866,3 +866,6 @@ a.porte:hover{background:rgba(255,255,255,.55)}
 .statut.dispo{color:#13704a;border-color:rgba(19,112,74,.3);background:rgba(47,182,124,.1)}
 .bureau-titre{color:#13704a}
 .bientot{color:var(--texte2)}
+.coupure .x{color:#b34d29}
+nav.liens .sous a:hover,nav.liens .sous a:focus-visible{background:rgba(106,67,216,.08)}
+.sous-mobile{border-color:var(--bord)}

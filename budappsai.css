@@ -869,3 +869,10 @@ a.porte:hover{background:rgba(255,255,255,.55)}
 .coupure .x{color:#b34d29}
 nav.liens .sous a:hover,nav.liens .sous a:focus-visible{background:rgba(106,67,216,.08)}
 .sous-mobile{border-color:var(--bord)}
+
+/* Tarifs : installer Projé9, en large */
+.installer-projet{text-align:center;max-width:980px;margin:0 auto;padding:24px 0}
+.installer-projet h2{text-align:center;max-width:none;margin:0 auto 22px}
+.installer-projet p{max-width:44em;margin:0 auto;font-size:18px;line-height:1.7;color:var(--texte2)}
+.installer-projet .actions{margin-top:34px;justify-content:center;gap:16px}
+.installer-projet .mac-bientot{margin-top:22px}

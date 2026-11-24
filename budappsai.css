@@ -516,7 +516,7 @@ footer.pied{position:relative;z-index:1;padding:64px 0 48px;color:var(--texte3);
 @media (max-width:760px){.mains-cadre{bottom:6%;width:640px}}
 @media (prefers-reduced-motion:reduce){.main-g,.main-d{animation:none}.lueur{animation:none;opacity:.8}.etincelle{animation:none}}
 
-/* ── La vidéo de PROJETLIA ─ */
+/* ── La vidéo de Projé9 ─ */
 .film{margin:0}
 .film .fenetre{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#000;box-shadow:0 40px 100px -30px rgba(0,0,0,.9)}
 .film .chrome span{margin:0 auto;padding-right:50px;font-size:12px;color:var(--texte2)}
@@ -739,3 +739,130 @@ nav.liens .groupe>a:focus-visible{outline:2px solid var(--corail);outline-offset
 .guide-achat{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:18px 20px;border:1px solid var(--bord);border-radius:var(--r);background:var(--carte)}
 .guide-achat div{display:flex;flex-direction:column;gap:4px;max-width:40em}.guide-achat span{color:var(--texte2);font-size:14.5px}
 #formules{scroll-margin-top:80px}
+
+/* ═════════════════════════════════════════════════════════════════════
+   Nouvelle identité (24/11/2026) : le nœud pastel.
+   Fond clair lilas-pêche, texte prune, accent violet-bleu. Titres en grotesque gras.
+   ═════════════════════════════════════════════════════════════════════ */
+:root{
+  --fond:#f4eefb;--fond2:#ece3f8;--fond3:#e3d7f4;--carte:rgba(255,255,255,.5);--bord:rgba(54,34,104,.13);
+  --texte:#1b1431;--texte2:#4b4263;--texte3:#665d7e;
+  --violet:#6a43d8;--bleu:#4c74ea;--corail:#6a43d8;--lilas:#5b3cc9;--or:#c98a3d;--rose:#d978b8;
+  --degrade:linear-gradient(95deg,#7b3fe4 0%,#c057d6 45%,#5b86f0 100%);
+  --titre:"Hanken Grotesk",-apple-system,"Segoe UI",sans-serif;
+}
+body{background:linear-gradient(180deg,#efe6fb 0%,#f6eef6 45%,#fbf0e8 100%) fixed;color:var(--texte)}
+::selection{background:rgba(106,67,216,.22);color:var(--texte)}
+:focus-visible{outline-color:var(--violet)}
+.ciel{background:radial-gradient(ellipse 55% 40% at 85% 0%,rgba(192,140,240,.35),transparent 70%),
+  radial-gradient(ellipse 45% 35% at 5% 10%,rgba(250,196,170,.35),transparent 70%)}
+.ciel .points{opacity:.12}
+
+/* En-tête */
+header.tete{background:rgba(246,240,252,.78);border-bottom:1px solid var(--bord)}
+.logo.logo-noeud{width:40px;height:40px;border-radius:12px;overflow:hidden;background:none;box-shadow:0 6px 18px -6px rgba(106,67,216,.45)}
+.logo.logo-noeud img{width:100%;height:100%;object-fit:cover}
+.marque{font-weight:700;letter-spacing:-.025em;color:var(--texte)}
+.marque .ai{background:var(--degrade);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav.liens a::after{background:var(--violet)}
+nav.liens .sous{background:rgba(250,246,254,.98);box-shadow:0 20px 50px -20px rgba(54,34,104,.35)}
+.menu-mobile{background:#f6f0fc}
+
+/* Titres */
+h1,h2{font-family:var(--titre);font-weight:750;letter-spacing:-.035em}
+.porte h3{font-family:var(--titre);font-weight:700;letter-spacing:-.02em}
+.tarif .prix{font-family:var(--titre);font-weight:700}
+.menu-mobile a{font-family:var(--titre);font-weight:600}
+.defile span{font-family:var(--titre);font-style:normal;font-weight:600}
+.degrade{background:var(--degrade);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+.etiquette{color:var(--violet);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+.etiquette::before{background:var(--violet)}
+
+/* Boutons : pilules, le principal en dégradé */
+.btn{border-radius:999px;border-color:rgba(27,20,49,.22);color:var(--texte)}
+.btn:hover{background:var(--texte);color:#fff;border-color:var(--texte)}
+.btn-plein,.btn-lumiere{background:var(--degrade);color:#fff;border-color:transparent;box-shadow:0 12px 28px -12px rgba(106,67,216,.7)}
+.btn-plein:hover,.btn-lumiere:hover{background:var(--degrade);color:#fff;border-color:transparent;filter:brightness(1.07);transform:translateY(-1px)}
+
+/* Cartes et surfaces */
+.carte{background:var(--carte);border-color:var(--bord)}
+a.porte:hover{background:rgba(255,255,255,.55)}
+.coeur{background:linear-gradient(145deg,#fff,#efe7fb);border-color:var(--bord);box-shadow:0 0 60px rgba(106,67,216,.18)}
+.anneau{border-color:rgba(54,34,104,.18)}
+.anneau.a3{border-color:rgba(54,34,104,.08)}
+.pied{border-top:1px solid var(--bord)}
+.geant{color:rgba(106,67,216,.08)}
+
+/* Accueil : le nœud */
+.heros-noeud{padding:40px 0 64px;position:relative;z-index:1}
+.heros-grille{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:center;min-height:min(640px,calc(100dvh - 160px))}
+.heros-texte .lieu{margin:0;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--texte2);display:flex;align-items:center;gap:12px}
+.heros-texte .lieu::before{content:"";width:34px;height:1px;background:var(--texte2)}
+.heros-texte h1{font-size:clamp(46px,6.4vw,92px);line-height:.98;letter-spacing:-.045em;margin:20px 0 24px;max-width:9.5em}
+.heros-texte h1 .degrade{display:inline}
+.heros-texte .sous{font-size:19px;line-height:1.55;color:var(--texte2);max-width:30em;margin:0 0 32px}
+.heros-texte .actions{display:flex;flex-wrap:wrap;gap:14px}
+.rond-lecture{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--texte);color:#fff;margin-right:-8px}
+.rond-lecture svg{width:12px;height:12px}
+.btn:hover .rond-lecture{background:#fff;color:var(--texte)}
+.heros-visuel{position:relative;aspect-ratio:1/1;max-width:620px;justify-self:end;width:100%}
+.heros-visuel img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 36%,transparent 70%);mask-image:radial-gradient(circle at 50% 50%,#000 36%,transparent 70%);
+  animation:flotte 9s ease-in-out infinite}
+.bulle{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff,#d8c6f5 45%,#9f86d9 100%);box-shadow:0 8px 24px -6px rgba(106,67,216,.45)}
+.bulle.b1{width:34px;height:34px;top:12%;left:16%;animation:flotte 7s ease-in-out infinite}
+.bulle.b2{width:22px;height:22px;top:30%;right:6%;animation:flotte 8s ease-in-out -2s infinite}
+.bulle.b3{width:42px;height:42px;bottom:16%;left:8%;animation:flotte 10s ease-in-out -4s infinite}
+@keyframes flotte{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.atouts{list-style:none;margin:28px 0 0;padding:22px 8px;display:grid;grid-template-columns:repeat(4,1fr);
+  background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.8);border-radius:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 24px 60px -30px rgba(54,34,104,.35)}
+.atouts li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:6px 16px;border-right:1px solid var(--bord)}
+.atouts li:last-child{border-right:0}
+.atouts svg{width:30px;height:30px;color:var(--violet);margin-bottom:6px}
+.atouts strong{font-size:16px;font-weight:650}
+.atouts span{font-size:14px;color:var(--texte2)}
+.ecosysteme{padding:72px 0 80px}
+.eco-grille{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center}
+.eco-texte h2{font-size:clamp(36px,4.4vw,58px);margin:12px 0 18px}
+.eco-texte .chapeau{font-size:18px;color:var(--texte2);margin-bottom:28px}
+.tuiles-apps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tuile-app{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:22px 12px 20px;border-radius:20px;
+  background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.85);box-shadow:0 16px 40px -26px rgba(54,34,104,.45);
+  transition:transform .3s var(--ressort),box-shadow .3s}
+.tuile-app:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(54,34,104,.5)}
+.tuile-app .pastille-app{width:50px;height:50px;border-radius:15px;background:var(--c);margin-bottom:8px}
+.tuile-app strong{font-size:16.5px;font-weight:700;letter-spacing:-.01em}
+.tuile-app span:last-child{font-size:13.5px;color:var(--texte2);line-height:1.35}
+.bandeau-sombre{list-style:none;margin:56px 0 0;padding:24px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:999px;
+  background:linear-gradient(100deg,#221a45,#2e2160 55%,#3b2a72);color:#efe9ff;box-shadow:0 30px 60px -30px rgba(34,26,69,.7)}
+.bandeau-sombre li{display:flex;align-items:center;gap:16px;padding:0 24px;border-right:1px solid rgba(255,255,255,.18);font-size:15px;line-height:1.4}
+.bandeau-sombre li:last-child{border-right:0}
+.bandeau-sombre svg{width:30px;height:30px;flex:none;color:#f0b98a}
+@media (max-width:980px){
+  .heros-grille{grid-template-columns:1fr;min-height:0}
+  .heros-visuel{justify-self:center;max-width:420px;order:-1;margin-bottom:-40px}
+  .atouts{grid-template-columns:1fr 1fr;row-gap:18px}
+  .atouts li:nth-child(2){border-right:0}
+  .eco-grille{grid-template-columns:1fr}
+  .bandeau-sombre{grid-template-columns:1fr;border-radius:24px;gap:16px}
+  .bandeau-sombre li{border-right:0;padding:0}
+}
+@media (max-width:560px){
+  .tuiles-apps{grid-template-columns:1fr 1fr}
+  .atouts{grid-template-columns:1fr}
+  .atouts li{border-right:0}
+}
+@media (prefers-reduced-motion:reduce){.heros-visuel img,.bulle{animation:none}}
+/* Carte Pro sur fond prune */
+.tarif.pro{background:linear-gradient(170deg,#2a1f55,#1b1431);color:#f4eefb;border-color:#2a1f55}
+.tarif.pro .nom{color:#fff}
+.tarif.pro li{color:#ddd5f2}
+.tarif.pro ul{border-color:rgba(255,255,255,.16)}
+.tarif.pro .prix small,.tarif.pro small{color:#bfb4dc}
+.tarif.pro .statut{color:#f0b98a}
+.tarif.pro a:not(.btn){color:#f0b98a}
+
+.statut.dispo{color:#13704a;border-color:rgba(19,112,74,.3);background:rgba(47,182,124,.1)}
+.bureau-titre{color:#13704a}
+.bientot{color:var(--texte2)}

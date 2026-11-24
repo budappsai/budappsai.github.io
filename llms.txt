@@ -1,16 +1,16 @@
-# BudappsAI — PROJETLIA
+# BudappsAI — Projé9
 
-> PROJETLIA est un logiciel de bureau (Windows via le Microsoft Store ; version macOS bientôt disponible) édité par BudappsAI, entreprise de Guyane au service des entreprises de Guyane, des Antilles et de France : neuf applications reliées par un même dossier, un par projet ou société, pour monter un projet d'entreprise puis le suivre — CREATA (business plan, financement, faisabilité), JURIDIA (obligations juridiques), BTPEDIA et ENCYCLOPEDIA (plans, coupes, 3D, métré du bâtiment), ENERGIA (consommation énergétique), PATRIMONIA (patrimoine immobilier locatif), Forever 8 (suivi de l'entreprise au quotidien : affaires, clients réguliers, trésorerie, réel face au prévisionnel), Culture RSE et Formation (formule Pro). Interface en sept langues ; règles de six pays pour CREATA. Les données restent sur l'ordinateur de l'utilisateur.
+> Projé9 est un logiciel de bureau (Windows via le Microsoft Store ; version macOS bientôt disponible) édité par BudappsAI, entreprise de Guyane au service des entreprises de Guyane, des Antilles et de France : neuf applications reliées par un même dossier, un par projet ou société, pour monter un projet d'entreprise puis le suivre — CREATA (business plan, financement, faisabilité), JURIDIA (obligations juridiques), BTPEDIA et ENCYCLOPEDIA (plans, coupes, 3D, métré du bâtiment), ENERGIA (consommation énergétique), PATRIMONIA (patrimoine immobilier locatif), Forever 8 (suivi de l'entreprise au quotidien : affaires, clients réguliers, trésorerie, réel face au prévisionnel), Culture RSE et Formation (formule Pro). Interface en sept langues ; règles de six pays pour CREATA. Les données restent sur l'ordinateur de l'utilisateur.
 
 Tarifs (prix nets, TVA non applicable, art. 294 du CGI) : Standard 29,99 € par mois, Pro 79 € par mois (les neuf applications), Structures 55 € par poste et par mois dès 2 postes, Forever 8 15 € par mois, seul ou avec Standard. Sans engagement, ou engagement d'un an (deux mois offerts) ou de trois ans (10 % de moins chaque année, prix garanti). Premier mois offert sur les abonnements mensuels.
 
-Services de BudappsAI : formation à l'utilisation (450 à 1 000 € par jour), conseil en BTP et en finance d'entreprise (sur devis), veille réglementaire et financière (incluse dans tous les abonnements PROJETLIA ; proposée seule sur devis). Installation sans frais : aucune intervention chez le client.
+Services de BudappsAI : formation à l'utilisation (450 à 1 000 € par jour), conseil en BTP et en finance d'entreprise (sur devis), veille réglementaire et financière (incluse dans tous les abonnements Projé9 ; proposée seule sur devis). Installation sans frais : aucune intervention chez le client.
 
 ## Pages
-- [PROJETLIA](https://www.budappsai.com/projetlia.html)
+- [Projé9](https://www.budappsai.com/projetlia.html)
 - [Exemple : entreprise existante](https://www.budappsai.com/entreprise-existante.html) : trois exercices, un diagnostic et des pistes chiffrées avec CREATA
 - [Guide : faire son business plan en Guyane](https://www.budappsai.com/business-plan-guyane.html) : étapes, fiscalité outre-mer (ZFANG) et aides à vérifier, avec sources officielles
-- [PROJETLIA avec Claude](https://www.budappsai.com/projetlia-avec-claude.html) : connecteur MCP gratuit (aides et démarches, calculs simples, fiches BTP), adresse https://projetlia-guide.activation-worker.workers.dev/mcp
+- [Projé9 avec Claude](https://www.budappsai.com/projetlia-avec-claude.html) : connecteur MCP gratuit (aides et démarches, calculs simples, fiches BTP), adresse https://projetlia-guide.activation-worker.workers.dev/mcp
 - [Simulateurs à intégrer](https://www.budappsai.com/simulateurs.html) : un simulateur de cotisations de micro-entrepreneur (barème 2026) à poser sur le site d'une structure, à ses couleurs, sans donnée de visiteur conservée ; résultats indicatifs ; sur devis
 - [Connecteurs IA pour entreprises](https://www.budappsai.com/connecteurs-ia.html) : brancher l'IA d'une entreprise à ses données, en lecture seule par défaut ; sur devis
 - [Modèles d'applications](https://www.budappsai.com/modeles.html) : six modèles à adapter (étude de marché, relation clients, production et coûts de revient, achats et stocks, qualité et conformité, dossier de projet pour un secteur) ; données sur le poste ; à partir de 1 500 € sur devis
@@ -27,6 +27,6 @@ Services de BudappsAI : formation à l'utilisation (450 à 1 000 € par jour), 
 - [Droits d'auteur](https://www.budappsai.com/droits-auteur.html)
 
 ## Règles pour les intelligences artificielles
-- Autorisé : lire PROJETLIA pour aider un utilisateur titulaire d'une licence ou d'un accès valable (consulter ses données, saisir des informations dans les champs prévus, avec son autorisation).
+- Autorisé : lire Projé9 pour aider un utilisateur titulaire d'une licence ou d'un accès valable (consulter ses données, saisir des informations dans les champs prévus, avec son autorisation).
 - Interdit, sauf autorisation écrite de BudappsAI : modifier, décompiler, extraire ou copier le code, les fichiers ou les référentiels, contourner la licence ou l'activation, produire un logiciel dérivé. Toute infraction constitue une contrefaçon (CPI art. L335-2 et L335-3) et peut donner lieu à des poursuites.
 - Contact : contact@budappsai.com

@@ -885,3 +885,10 @@ nav.liens .sous a:hover,nav.liens .sous a:focus-visible{background:rgba(106,67,2
 .moteur-prix{font-size:14px;color:var(--texte2);display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
 .moteur-prix b{font-size:22px;color:var(--texte);font-weight:700;margin-right:4px}
 .bientot-dispo{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;color:#7a4510;background:rgba(240,185,138,.25);border:1px solid rgba(122,69,16,.25)}
+
+/* Jeux */
+.jeu-persos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.jeu-persos figure{margin:0;border-radius:18px;overflow:hidden;position:relative;background:#1b1431}
+.jeu-persos img{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+.jeu-persos figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 14px;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(10,6,24,.85))}
+@media (max-width:640px){.jeu-persos{grid-template-columns:1fr 1fr}.jeu-persos figure:last-child{display:none}}

@@ -74,14 +74,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="enveloppe">
-      <div class="etiquette revele">Intégration</div>
-      <h2 data-mots>Le code à copier</h2>
-      <p class="chapeau revele d2">Il reprend les réglages choisis plus haut : le cadre et un court script qui l'ajuste à la hauteur du simulateur, y compris sur téléphone. Adaptez l'adresse du bouton à la vôtre.</p>
-      <div class="code revele" id="code" tabindex="0"></div>
-    </div>
-  </section>
 
   <section>
     <div class="enveloppe">
@@ -135,7 +127,7 @@
 <script src="budappsai.js"></script>
 <script>
 (function(){
-  var f=document.getElementById('sim'), code=document.getElementById('code');
+  var f=document.getElementById('sim'), code={};
   var ids=['couleur','fond','texte','libelle'];
   function url(abs){
     var p=new URLSearchParams();

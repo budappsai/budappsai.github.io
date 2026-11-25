@@ -903,3 +903,12 @@ nav.liens .sous a:hover,nav.liens .sous a:focus-visible{background:rgba(106,67,2
 
 /* Titres en violet (onglet Moteurs et connecteurs IA) */
 h2.titre-violet{color:var(--violet)}
+
+/* 25/11 : moins d'espace entre les blocs */
+section{padding:60px 0 68px}
+.page-tete{padding:64px 0 12px}
+.page-tete+section,.page-tete+section[style]{padding-top:12px!important}
+.heros-noeud{padding:28px 0 8px}
+.heros-grille{min-height:min(540px,calc(100dvh - 180px))}
+.heros-noeud+section{padding-top:28px}
+@media (max-width:760px){section{padding:44px 0 52px}.page-tete{padding:44px 0 8px}}
